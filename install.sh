@@ -11,3 +11,6 @@ echo "Symlinked .tmux.conf to $HOME/.tmux.conf"
 rm -f $HOME/.emacs
 ln -s $SCRIPTPATH/.emacs $HOME/.emacs
 echo "Symlinked .emacs to $HOME/.emacs"
+rm -f $HOME/.zshrc
+ln -s $SCRIPTPATH/.zshrc $HOME/.zshrc
+echo "Symlinked .zshrc to $HOME/.zshrc"
