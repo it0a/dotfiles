@@ -77,6 +77,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias bcmt="$HOME/develop/streamlinx/bcmt/bin/bcmt"
 alias grails="$GRAILS_HOME/bin/grails"
 alias gradle="$GRADLE_HOME/bin/gradle"
 alias decurse="curl -F \"dump=<-\" http://www.decur.se/d"
@@ -86,6 +87,7 @@ alias rs2m="~/scripts/rs2m.sh"
 alias s2ut="gradle --project-dir ~/develop/TestRunner -I ~/develop/TestRunner/init.gradle test"
 alias vi=vim
 
+export PATH="$PATH:/home/jgonzalez/develop/streamlinx/SmartsToo2/src/groovy/postCode.groovy" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.bcmt/bin"
 
