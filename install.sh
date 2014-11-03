@@ -7,3 +7,6 @@ echo "Symlinked xmonad.hs to $HOME/.xmonad/xmonad.hs"
 rm -f $HOME/.tmux.conf
 ln -s $SCRIPTPATH/.tmux.conf $HOME/.tmux.conf
 echo "Symlinked .tmux.conf to $HOME/.tmux.conf"
+rm -f $HOME/.emacs
+ln -s $SCRIPTPATH/.emacs $HOME/.emacs
+echo "Symlinked .emacs to $HOME/.emacs"
