@@ -14,3 +14,12 @@ echo "Symlinked .emacs to $HOME/.emacs"
 rm -f $HOME/.zshrc
 ln -s $SCRIPTPATH/.zshrc $HOME/.zshrc
 echo "Symlinked .zshrc to $HOME/.zshrc"
+rm -f $HOME/.Xresources
+ln -s $SCRIPTPATH/.Xresources $HOME/.Xresources
+echo "Symlinked .Xresources to $HOME/.Xresources"
+rm -f $HOME/.xinitrc
+ln -s $SCRIPTPATH/.xinitrc $HOME/.xinitrc
+echo "Symlinked .xinitrc to $HOME/.xinitrc"
+rm -f $HOME/.muttrc
+ln -s $SCRIPTPATH/.muttrc $HOME/.muttrc
+echo "Symlinked .muttrc to $HOME/.muttrc"

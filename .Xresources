@@ -1,0 +1,65 @@
+URxvt.buffered: true
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard,font-size,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt*termName: rxvt-unicode-256color
+URxvt.transparent: true
+URxvt*shading: 30
+URxvt.background: #080808
+URxvt.scrollBar: false
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.dpi: 220
+Xft.rgba: rgb
+URxvt.font: xft:Inconsolata for Powerline:pixelsize=36
+URxvt.internalBorder: 0
+URxvt.perl-ext: default,url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+
+
+! - Terminal Colors
+*foreground: #FFFFFF
+*color0: 	#000000
+*color1: 	#FF6565
+*color2: 	#93D44F
+*color3: 	#EAB93D
+*color4: 	#204A87
+*color5: 	#CE5C00
+*color6: 	#89B6E2
+*color7: 	#CCCCCC
+*color8: 	#555753
+*color9: 	#FF8D8D
+*color10: 	#C8E7A8
+*color11: 	#FFC123
+*color12: 	#3465A4
+*color13: 	#F57900
+*color14: 	#46A4FF
+*color15: 	#FFFFFF
+
+!*foreground: #FFFFFF
+!*color0: 	#000000
+!*color1: 	#CD0000
+!*color2: 	#8143FF
+!*color3: 	#A5D4FC
+!*color4: 	#1E90FF
+!*color5: 	#CD00CD
+!*color6: 	#00CDCD
+!*color7: 	#DBFCFF
+!*color8: 	#4C4C4C
+!*color9: 	#FF0000
+!*color10: 	#00B95F
+!*color11: 	#AFEAFF
+!*color12: 	#85FFEB
+!*color13: 	#FF00FF
+!*color14: 	#00FFFF
+!*color15: 	#9AAFFF
