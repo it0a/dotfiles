@@ -1,0 +1,41 @@
+set framefmt %t
+set bgcolor #000000
+set fgcolor #CCCCCC
+set fwcolor #343434
+set bwcolor #272727
+set font "Terminus-9"
+set winliststyle column
+set waitcursor 1
+
+# infobar padding for dzen2
+set border 0
+addhook switchwin banish
+addhook key banish
+bind c exec urxvt
+bind R restart
+bind h exec ratpoison -c "exec synclient TouchpadOff=0" -c "echo Touchpad enabled."
+bind C-h exec ratpoison -c "exec synclient TouchpadOff=1" -c "echo Touchpad disabled."
+escape C-b
+startup_message off
+defborder 0
+defpadding 0 0 0 0
+defbarpadding 0 0
+
+definekey top M-F10 exec amixer set Master toggle
+definekey top M-F11 exec amixer set Master 5%-
+definekey top M-F12 exec amixer set Master 5%+
+
+definekey top C-F7 exec ratpoison -c "exec cmus-remote -C 'win-sel-cur' && cmus-remote -C 'win-add-p'" -c "echo Added current track to playlist!"
+definekey top C-F8 exec cmus-remote --seek -10
+definekey top M-F8 exec cmus-remote --seek -1m
+definekey top C-F9 exec cmus-remote --seek +10
+definekey top M-F9 exec cmus-remote --seek +1m
+definekey top C-F10 exec cmus-remote --pause
+definekey top C-F11 exec cmus-remote --prev
+definekey top C-F12 exec cmus-remote --next
+
+exec xset -b
+exec feh --bg-fill ~/pictures/wallpapers/wallpaper-843962.png
+exec unclutter -idle 5 -jitter 2 -root &
+exec xscreensaver
+exec /usr/bin/rpws init 9 -k
