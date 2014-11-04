@@ -23,3 +23,6 @@ echo "Symlinked .xinitrc to $HOME/.xinitrc"
 rm -f $HOME/.muttrc
 ln -s $SCRIPTPATH/.muttrc $HOME/.muttrc
 echo "Symlinked .muttrc to $HOME/.muttrc"
+rm -f $HOME/.ratpoisonrc
+ln -s $SCRIPTPATH/.ratpoisonrc $HOME/.ratpoisonrc
+echo "Symlinked .ratpoisonrc to $HOME/.ratpoisonrc"
