@@ -1,0 +1,111 @@
+{
+    "dbProfiles": [
+        {
+            "name": "local",
+            "dbConfig": {
+                "host": "localhost",
+                "port": "3306",
+                "user": "root",
+                "schema": "smarts_too_dallas_07142014"
+            }
+        }
+    ],
+    "tableProfiles": [
+        {
+            "name": "default",
+            "dumpDir": "/home/jgonzalez/develop/streamlinx/s2md",
+            "tables": [
+                {
+                    "name": "domain_meta_data"
+                },
+                {
+                    "name": "property_meta_data"
+                },
+                {
+                    "name": "area_meta_data"
+                },
+                {
+                    "name": "area_menu_item"
+                },
+                {
+                    "name": "area_query_source"
+                },
+                {
+                    "name": "area_query_source_domain_meta_data"
+                },
+                {
+                    "name": "area_category"
+                },
+                {
+                    "name": "groups"
+                },
+                {
+                    "name": "groups_area"
+                },
+                {
+                    "name": "list_view"
+                },
+                {
+                    "name": "list_view_field"
+                },
+                {
+                    "name": "groups_area_list_view"
+                },
+                {
+                    "name": "work_flow"
+                },
+                {
+                    "name": "step_definition"
+                },
+                {
+                    "name": "transition_definition"
+                },
+                {
+                    "name": "step_sub_tab"
+                },
+                {
+                    "name": "print_attachment"
+                },
+                {
+                    "name": "print_attachment_domain_meta_data"
+                },
+                {
+                    "name": "print_section_definition"
+                },
+                {
+                    "name": "print_template"
+                },
+                {
+                    "name": "print_template_section"
+                },
+                {
+                    "name": "query"
+                },
+                {
+                    "name": "template_store"
+                },
+                {
+                    "name": "service_frequency"
+                },
+                {
+                    "name": "sub_area_meta_data"
+                },
+                {
+                    "name": "step_field_set"
+                },
+                {
+                    "name": "tenant_base"
+                },
+                {
+                    "name": "field_option"
+                },
+                {
+                    "name": "field_option_set"
+                },
+                {
+                    "name": "service_type"
+                }
+            ]
+        }
+    ]
+}

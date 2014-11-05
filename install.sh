@@ -26,3 +26,6 @@ echo "Symlinked .muttrc to $HOME/.muttrc"
 rm -f $HOME/.ratpoisonrc
 ln -s $SCRIPTPATH/.ratpoisonrc $HOME/.ratpoisonrc
 echo "Symlinked .ratpoisonrc to $HOME/.ratpoisonrc"
+rm -f $HOME/.mmt.json
+ln -s $SCRIPTPATH/.mmt.json $HOME/.mmt.json
+echo "Symlinked .mmt.json to $HOME/.mmt.json"
