@@ -36,6 +36,8 @@ alias vi=vim
 export PATH="$PATH:/home/jgonzalez/develop/streamlinx/SmartsToo2/src/groovy/postCode.groovy" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.bcmt/bin"
+export GOPATH="$HOME/develop/go"
+export PATH="$PATH:$GOPATH/bin"
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/home/it0a/.gvm/bin/gvm-init.sh" ]] && source "/home/it0a/.gvm/bin/gvm-init.sh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
