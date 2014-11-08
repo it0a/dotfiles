@@ -24,8 +24,8 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 export GRAILS_HOME=$HOME/.gvm/grails/current
+export GRADLE_HOME=$HOME/.gvm/gradle/current
 alias bcmt="$HOME/develop/streamlinx/bcmt/bin/bcmt"
 alias grails="$GRAILS_HOME/bin/grails"
 alias gradle="$GRADLE_HOME/bin/gradle"
@@ -41,5 +41,5 @@ export PATH="$PATH:$HOME/.bcmt/bin"
 export GOPATH="$HOME/develop/go"
 export PATH="$PATH:$GOPATH/bin"
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/home/it0a/.gvm/bin/gvm-init.sh" ]] && source "/home/it0a/.gvm/bin/gvm-init.sh"
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
