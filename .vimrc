@@ -34,6 +34,7 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'matchit.zip'
+Plugin 'changesqlcase.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mtth/scratch.vim'
 Plugin 'Blackrush/vim-gocode'
@@ -473,3 +474,8 @@ let g:UltiSnipsListSnippets="<c-e>"
 " and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+let g:UltisnipsSnippetsDir="~/.vim/snippets"
+let g:UltisnipsSnippetDirectories=['Ultisnips', 'snippets']
+
+vmap <leader>uc :call ChangeSqlCase()<CR>
