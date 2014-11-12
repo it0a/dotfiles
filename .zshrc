@@ -8,6 +8,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
 export GRAILS_OPTS="-XX:MaxPermSize=768m -XX:PermSize=768m -Xms768m -Xmx2048m -XX:-UseGCOverheadLimit"
+export GRAILS_OPTS="-server -noverify -XX:PermSize=768m -XX:MaxPermSize=768m -Xmx2048M -Xms2048m -XX:+UseParallelGC -Djava.net.preferIPv4Stack=true -Dsun.reflect.inflationThreshold=100000"
 export EDITOR='vim'
 # export MANPATH="/usr/local/man:$MANPATH"
 # Compilation flags
@@ -24,6 +25,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias tmux="tmux -2"
 alias bcmt="$HOME/develop/streamlinx/bcmt/bin/bcmt"
 alias grails="$GRAILS_HOME/bin/grails"
 alias gradle="$GRADLE_HOME/bin/gradle"
@@ -37,7 +39,9 @@ export PATH="$PATH:/home/jgonzalez/develop/streamlinx/SmartsToo2/src/groovy/post
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.bcmt/bin"
 export GOPATH="$HOME/develop/go"
+export GOROOT="$HOME/develop/go"
 export PATH="$PATH:$GOPATH/bin"
+export DATABASE_URL="postgres://it0a@127.0.0.1:5432/last98?sslmode=disable"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/home/it0a/.gvm/bin/gvm-init.sh" ]] && source "/home/it0a/.gvm/bin/gvm-init.sh"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
