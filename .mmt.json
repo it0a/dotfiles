@@ -3,7 +3,7 @@
         {
             "name": "local",
             "dbConfig": {
-                "host": "localhost",
+                "host": "10.0.8.14",
                 "port": "3306",
                 "user": "root",
                 "schema": "smarts_too_dallas_07142014"
@@ -37,10 +37,28 @@
                     "name": "area_category"
                 },
                 {
+                    "name": "area_category_area_meta_data"
+                },
+                {
+                    "name": "domain_action"
+                },
+                {
+                    "name": "domain_action_property_meta_data"
+                },
+                {
+                    "name": "dyna_form"
+                },
+                {
+                    "name": "dyna_form_element"
+                },
+                {
                     "name": "groups"
                 },
                 {
                     "name": "groups_area"
+                },
+                {
+                    "name": "groups_role"
                 },
                 {
                     "name": "list_view"
@@ -58,10 +76,19 @@
                     "name": "step_definition"
                 },
                 {
+                    "name": "step_definition_domain_action"
+                },
+                {
+                    "name": "step_definition_property_meta_data"
+                },
+                {
                     "name": "transition_definition"
                 },
                 {
                     "name": "step_sub_tab"
+                },
+                {
+                    "name": "step_task_template"
                 },
                 {
                     "name": "print_attachment"
@@ -80,6 +107,15 @@
                 },
                 {
                     "name": "query"
+                },
+                {
+                    "name": "query_column"
+                },
+                {
+                    "name": "area_field_set"
+                },
+                {
+                    "name": "area_field_set_property"
                 },
                 {
                     "name": "template_store"
@@ -101,6 +137,12 @@
                 },
                 {
                     "name": "field_option_set"
+                },
+                {
+                    "name": "select_list"
+                },
+                {
+                    "name": "select_list_option"
                 },
                 {
                     "name": "service_type"
