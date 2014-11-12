@@ -1,0 +1,10 @@
+--langdef=groovy
+--langmap=groovy:.groovy
+--regex-groovy=/^[ \t]*[(private|public|protected) ( \t)][A-Za-z0-9<>]+[ \t]+([A-Za-z0-9]+)[ \t]*\(([ \t]*[a-zA-Z0-9_]*[ \t]*[a-zA-Z0-9_ ,]*)*\)/\1/f,function,functions/
+--regex-groovy=/^[ \t]*def[ \t]+"([A-Za-z0-9 ]+)"\(\)[ \t]*/\1/t,test,tests/
+--regex-groovy=/^[ \t]*[A-Za-qs-z0-9][A-Za-z0-9]* ([A-Za-z0-9]+)[ \t]*$/\1/p,property,properties/
+--regex-groovy=/^[ \t]*[(private|public|protected) ( \t)][A-Za-z0-9<>]+[ \t]+([A-Za-z0-9]+)[ \t]*=[ \t]*\{/\1/f,function,functions/
+--regex-groovy=/^[ \t]*private def[ \t]+([A-Za-z0-9_]+)[ \t]/\1/v,private,private variables/
+--regex-groovy=/^[ \t]*def[ \t]+([A-Za-z0-9_]+)[ \t]/\1/u,public,public variables/
+--regex-groovy=/^[ \t][abstract ( \t)]*[(private|public) ( \t)]*class[ \t]+([A-Za-z0-9_]+)[ \t]*/\1/c,class,classes/
+--regex-groovy=/^[ \t][abstract ( \t)]*[(private|public) ( \t)]*enum[ \t]+([A-Za-z0-9_]+)[ \t]*/\1/c,class,classes/

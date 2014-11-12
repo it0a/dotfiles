@@ -41,7 +41,6 @@ Plugin 'Blackrush/vim-gocode'
 Plugin 'oblitum/rainbow'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
-Plugin 'rjohnsondev/vim-compiler-go'
 Plugin 'sjl/gundo.vim'
 Plugin 'tommcdo/vim-fugitive-blame-ext'
 Plugin 'tpope/vim-abolish'
@@ -394,7 +393,7 @@ nnoremap <silent> <C-f> :<C-u>Unite -no-split grep:.<CR>
 nnoremap <silent> <C-y> :<C-u>Unite -buffer-name=yanks history/yank<CR>
 nnoremap <silent> <leader>/ :<C-u>Unite line -start-insert<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <F8> :VimuxTogglePane<CR>
+nnoremap <F8> :TagbarToggle<CR>
 
 ""
 let g:CommandTTraverseSCM="pwd"
@@ -479,3 +478,22 @@ let g:UltisnipsSnippetsDir="~/.vim/snippets"
 let g:UltisnipsSnippetDirectories=['Ultisnips', 'snippets']
 
 vmap <leader>uc :call ChangeSqlCase()<CR>
+
+let g:golang_goroot = "~/develop/go"
+
+map <F5> :!ctags -R
+
+" tagbar support for groovy
+let g:tagbar_type_groovy = {
+\ 'ctagstype' : 'groovy',
+\ 'kinds'     : [
+    \ 'p:property',
+    \ 'c:class',
+    \ 'i:interface',
+    \ 'f:function',
+    \ 'g:function',
+    \ 't:test',
+    \ 'v:private variables',
+    \ 'u:public variables',
+\ ]
+\ }
