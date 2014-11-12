@@ -13,7 +13,7 @@
     "tableProfiles": [
         {
             "name": "default",
-            "dumpDir": "/home/jgonzalez/develop/streamlinx/s2md",
+            "dumpDir": "/home/it0a/develop/streamlinx/s2md",
             "tables": [
                 {
                     "name": "domain_meta_data"
