@@ -29,3 +29,6 @@ echo "Symlinked .ratpoisonrc to $HOME/.ratpoisonrc"
 rm -f $HOME/.mmt.json
 ln -s $SCRIPTPATH/.mmt.json $HOME/.mmt.json
 echo "Symlinked .mmt.json to $HOME/.mmt.json"
+rm -f $HOME/.vimrc
+ln -s $SCRIPTPATH/.vimrc $HOME/.vimrc
+echo "Symlinked .vimrc to $HOME/.vimrc"
