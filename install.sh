@@ -32,3 +32,6 @@ echo "Symlinked .mmt.json to $HOME/.mmt.json"
 rm -f $HOME/.vimrc
 ln -s $SCRIPTPATH/.vimrc $HOME/.vimrc
 echo "Symlinked .vimrc to $HOME/.vimrc"
+rm -f $HOME/.ctags
+ln -s $SCRIPTPATH/.ctags $HOME/.ctags
+echo "Symlinked .ctags to $HOME/.ctags"
