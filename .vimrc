@@ -31,8 +31,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'junegunn/limelight.vim'
-Plugin 'marijnh/tern_for_vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'mkitt/tabline.vim'
+Plugin 'NathanNeff/grails-vim'
 Plugin 'matchit.zip'
 Plugin 'changesqlcase.vim'
 Plugin 'mattn/emmet-vim'
@@ -443,6 +444,7 @@ endif
 
 nnoremap <Leader>z :LiteDFMToggle<CR>:silent !tmux set status > /dev/null 2>&1<CR>:redraw!<CR>
 
+
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
@@ -495,3 +497,8 @@ let g:tagbar_type_groovy = {
     \ 'u:public variables',
 \ ]
 \ }
+
+
+hi TabLine term=bold cterm=bold ctermbg=233 ctermfg=236
+hi TabLineFill term=bold cterm=bold ctermbg=0
+hi TabLineSel term=bold cterm=bold ctermbg=0 ctermfg=189
