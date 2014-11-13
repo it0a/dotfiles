@@ -250,8 +250,6 @@ nnoremap <leader>ez :vsplit ~/.zshrc<cr>
 " Source (reload) .vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-nnoremap K <c-u>
-nnoremap J <c-d>
 nnoremap <leader>J J
 
 inoremap jk <esc>
@@ -492,7 +490,7 @@ let g:tagbar_type_groovy = {
     \ 'i:interface',
     \ 'f:function',
     \ 'g:function',
-    \ 't:test',
+    \ 't:specification',
     \ 'v:private variables',
     \ 'u:public variables',
 \ ]

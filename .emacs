@@ -5,14 +5,62 @@
 (add-to-list 'load-path "~/.emacs.d/org-mode/lisp")
 (require 'org)
 
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+     (define-key global-map "\C-cc" 'org-capture)
+
 (setq org-todo-keyword-faces
-   '(("TODO" . org-warning) ("IN-PROGRESS" . "yellow")
-     ("SUSPENDED" . "grey") ("CANCELED" . (:foreground "red" :weight bold))))
+    '(("PROJ" :foreground "blue" :weight bold)
+      ("TODO" :foreground "red1" :weight bold)
+      ("REPORT" :foreground "brightblue" :weight bold)
+      ("BUG" :foreground "color-124" :weight bold)
+      ("KNOWNCAUSE" :foreground "purple" :weight bold)
+      ("FIXED" :foreground "forest green" :weight bold)
+      ("WONT FIX" :foreground "lime green" :weight bold)
+      ("NEXT" :foreground "cyan" :weight bold)
+      ("STARTED" :foreground "brightcyan" :weight bold)
+      ("WAITING" :foreground "yellow" :weight bold)
+      ("DEFERRED" :foreground "gold" :weight bold)
+      ("DELEGATED" :foreground "gold" :weight bold)
+      ("MAYBE" :foreground "gray" :weight bold)
+      ("APPT" :foreground "red1" :weight bold)
+      ("CANCELED" :foreground "lime green" :weight bold)))
+
+(setq org-agenda-files (file-expand-wildcards "~/org/*.org"))
+
+(setq org-agenda-custom-commands
+      '(("Q" . "Custom queries") ;; gives label to "Q" 
+        ("Qa" "Archive search" search ""
+         ((org-agenda-files (file-expand-wildcards "~/archive/*.org")))) 
+        ("Qw" "Website search" search ""
+         ((org-agenda-files (file-expand-wildcards "~/website/*.org"))))
+        ("Qb" "Projects and Archive" search ""
+         ((org-agenda-text-search-extra-files (file-expand-wildcards "~/archive/*.org"))))
+        ;; searches both projects and archive directories
+        ("QA" "Archive tags search" org-tags-view "" 
+         ((org-agenda-files (file-expand-wildcards "~/archive/*.org"))))
+        ;; ...other commands here
+        ))
 
 
-(setq org-todo-keywords
-  '((sequence "TODO" "IN-PROGRESS" "|" "DONE")
-    (sequence "SUSPENDED" "|" "CANCELED")))
+ (setq org-todo-keywords
+  '((sequence "TODO"
+      "MAYBE"
+      "NEXT"
+      "STARTED"
+      "WAITING"
+      "DELEGATED"
+      "|"
+      "DONE"
+      "DEFERRED"
+      "CANCELED")
+    (sequence "REPORT(r)" 
+        "BUG(b)" 
+        "KNOWNCAUSE(k)" 
+        "|" 
+        "FIXED(f)" 
+        "WONTFIX(x)")
+    ))
+
 
 (setq org-log-done 'time)
 (setq org-log-done 'note)
