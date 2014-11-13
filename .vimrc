@@ -73,7 +73,7 @@ set so=7
 set wildmenu
 set wildignore=*.o,*~,*.pyc
 set ruler
-set cmdheight=2
+set cmdheight=1
 set hid
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -502,3 +502,5 @@ let g:tagbar_type_groovy = {
 hi TabLine term=bold cterm=bold ctermbg=233 ctermfg=236
 hi TabLineFill term=bold cterm=bold ctermbg=0
 hi TabLineSel term=bold cterm=bold ctermbg=0 ctermfg=189
+
+let g:lite_dfm_normal_bg_cterm = 232
