@@ -37,12 +37,14 @@ alias s2d="cd $HOME/develop/streamlinx && vim"
 alias rs2m="$HOME/usefulscripts/rs2m.sh"
 alias s2ut="gradle --project-dir $HOME/develop/TestRunner -I $HOME/develop/TestRunner/init.gradle test"
 alias vi=vim
+alias bower='noglob bower'
 export PATH="$PATH:/home/jgonzalez/develop/streamlinx/SmartsToo2/src/groovy/postCode.groovy" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.bcmt/bin"
 export GOPATH="$HOME/develop/go"
 export PATH="$PATH:$GOPATH/bin"
 export DATABASE_URL="postgres://it0a@127.0.0.1:5432/last98?sslmode=disable"
+export CHROME_BIN=/usr/bin/google-chrome-stable
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"

@@ -20,6 +20,7 @@
       ("STARTED" :foreground "brightcyan" :weight bold)
       ("WAITING" :foreground "yellow" :weight bold)
       ("DEFERRED" :foreground "gold" :weight bold)
+      ("UNTESTED" :foreground "color-176" :weight bold)
       ("DELEGATED" :foreground "gold" :weight bold)
       ("MAYBE" :foreground "gray" :weight bold)
       ("APPT" :foreground "red1" :weight bold)
@@ -49,6 +50,7 @@
       "STARTED"
       "WAITING"
       "DELEGATED"
+      "UNTESTED"
       "|"
       "DONE"
       "DEFERRED"
