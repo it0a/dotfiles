@@ -35,3 +35,6 @@ echo "Symlinked .vimrc to $HOME/.vimrc"
 rm -f $HOME/.ctags
 ln -s $SCRIPTPATH/.ctags $HOME/.ctags
 echo "Symlinked .ctags to $HOME/.ctags"
+rm -f $HOME/.bowerrc
+ln -s $SCRIPTPATH/.bowerrc $HOME/.bowerrc
+echo "Symlinked .bowerrc to $HOME/.bowerrc"
