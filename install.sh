@@ -1,40 +1,43 @@
 #!/bin/bash
 pushd `dirname $0` > /dev/null
-SCRIPTPATH=`pwd -P`
+SCRIPTPATH=$(pwd -P)
 popd > /dev/null
-rm -f $HOME/.xmonad/xmonad.hs
-ln -s $SCRIPTPATH/xmonad.hs $HOME/.xmonad/xmonad.hs
+rm -f "$HOME/.xmonad/xmonad.hs"
+ln -s "$SCRIPTPATH/xmonad.hs" "$HOME/.xmonad/xmonad.hs"
 echo "Symlinked xmonad.hs to $HOME/.xmonad/xmonad.hs"
-rm -f $HOME/.tmux.conf
-ln -s $SCRIPTPATH/.tmux.conf $HOME/.tmux.conf
+rm -f "$HOME/.tmux.conf"
+ln -s "$SCRIPTPATH/.tmux.conf" "$HOME/.tmux.conf"
 echo "Symlinked .tmux.conf to $HOME/.tmux.conf"
-rm -f $HOME/.emacs
-ln -s $SCRIPTPATH/.emacs $HOME/.emacs
+rm -f "$HOME/.emacs"
+ln -s "$SCRIPTPATH/.emacs" "$HOME/.emacs"
 echo "Symlinked .emacs to $HOME/.emacs"
-rm -f $HOME/.zshrc
-ln -s $SCRIPTPATH/.zshrc $HOME/.zshrc
+rm -f "$HOME/.zshrc"
+ln -s "$SCRIPTPATH/.zshrc" "$HOME/.zshrc"
 echo "Symlinked .zshrc to $HOME/.zshrc"
-rm -f $HOME/.Xresources
-ln -s $SCRIPTPATH/.Xresources $HOME/.Xresources
+rm -f "$HOME/.Xresources"
+ln -s "$SCRIPTPATH/.Xresources" "$HOME/.Xresources"
 echo "Symlinked .Xresources to $HOME/.Xresources"
-rm -f $HOME/.xinitrc
-ln -s $SCRIPTPATH/.xinitrc $HOME/.xinitrc
+rm -f "$HOME/.xinitrc"
+ln -s "$SCRIPTPATH/.xinitrc" "$HOME/.xinitrc"
 echo "Symlinked .xinitrc to $HOME/.xinitrc"
-rm -f $HOME/.muttrc
-ln -s $SCRIPTPATH/.muttrc $HOME/.muttrc
+rm -f "$HOME/.muttrc"
+ln -s "$SCRIPTPATH/.muttrc" "$HOME/.muttrc"
 echo "Symlinked .muttrc to $HOME/.muttrc"
-rm -f $HOME/.ratpoisonrc
-ln -s $SCRIPTPATH/.ratpoisonrc $HOME/.ratpoisonrc
+rm -f "$HOME/.ratpoisonrc"
+ln -s "$SCRIPTPATH/.ratpoisonrc" "$HOME/.ratpoisonrc"
 echo "Symlinked .ratpoisonrc to $HOME/.ratpoisonrc"
-rm -f $HOME/.mmt.json
-ln -s $SCRIPTPATH/.mmt.json $HOME/.mmt.json
+rm -f "$HOME/.mmt.json"
+ln -s "$SCRIPTPATH/.mmt.json" "$HOME/.mmt.json"
 echo "Symlinked .mmt.json to $HOME/.mmt.json"
-rm -f $HOME/.vimrc
-ln -s $SCRIPTPATH/.vimrc $HOME/.vimrc
+rm -f "$HOME/.vimrc"
+ln -s "$SCRIPTPATH/.vimrc" "$HOME/.vimrc"
 echo "Symlinked .vimrc to $HOME/.vimrc"
-rm -f $HOME/.ctags
-ln -s $SCRIPTPATH/.ctags $HOME/.ctags
+rm -f "$HOME/.ctags"
+ln -s "$SCRIPTPATH/.ctags" "$HOME/.ctags"
 echo "Symlinked .ctags to $HOME/.ctags"
-rm -f $HOME/.bowerrc
-ln -s $SCRIPTPATH/.bowerrc $HOME/.bowerrc
+rm -f "$HOME/.bowerrc"
+ln -s "$SCRIPTPATH/.bowerrc" "$HOME/.bowerrc"
 echo "Symlinked .bowerrc to $HOME/.bowerrc"
+rm -f "$HOME/.vimperatorrc"
+ln -s "$SCRIPTPATH/.vimperatorrc" "$HOME/.vimperatorrc"
+echo "Symlinked .vimperatorrc to $HOME/.vimperatorrc"

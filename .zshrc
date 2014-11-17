@@ -43,6 +43,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.bcmt/bin"
 export GOPATH="$HOME/develop/go"
 export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$HOME/.cabal/bin"
 export DATABASE_URL="postgres://it0a@127.0.0.1:5432/last98?sslmode=disable"
 export CHROME_BIN=/usr/bin/google-chrome-stable
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

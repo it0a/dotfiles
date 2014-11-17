@@ -16,6 +16,7 @@ Plugin 'ack.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'benmills/vimux'
 Plugin 'bling/vim-airline'
+Plugin 'claco/jasmine.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'bilalq/lite-dfm'
 Plugin 'dgryski/vim-godef'
@@ -32,6 +33,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'marijnh/tern_for_vim'
 Plugin 'mkitt/tabline.vim'
 Plugin 'NathanNeff/grails-vim'
 Plugin 'matchit.zip'
@@ -504,3 +506,7 @@ hi TabLineFill term=bold cterm=bold ctermbg=0
 hi TabLineSel term=bold cterm=bold ctermbg=0 ctermfg=189
 
 let g:lite_dfm_normal_bg_cterm = 232
+let g:syntastic_sh_checkers = ['shellcheck']
+let g:syntastic_javascript_checkers = ['jslint']
+nnoremap <leader>jm ^wdwIvar _<ESC>pa = <ESC>f{%A;<ESC>
+
