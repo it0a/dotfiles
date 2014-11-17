@@ -45,6 +45,7 @@ Plugin 'rking/ag.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'tommcdo/vim-fugitive-blame-ext'
 Plugin 'tpope/vim-abolish'
+Plugin 'triglav/vim-visual-increment'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
@@ -290,12 +291,13 @@ nmap <Leader>a <Plug>(EasyAlign)
 
 nnoremap <silent> - :Switch<cr>
 
-au BufRead,BufNewFile *.gsp setfiletype groovy
+au BufRead,BufNewFile *.gsp set filetype=html
 
 map <SPACE> <Plug>(easymotion-s2)
 
 nnoremap <F9> :VimuxRunCommand "gradle --project-dir ~/develop/TestRunner -I ~/develop/TestRunner/init.gradle test"<CR>
 nnoremap <F7> :call VimuxRunCommand("gradle --project-dir ~/develop/TestRunner -I ~/develop/TestRunner/init.gradle -Dtest.single=" . expand("%:t:r") . " test")<CR>
+nnoremap <F6> :call VimuxRunCommand("gradle --project-dir ~/develop/TestRunner -I ~/develop/TestRunner/init.gradle -Dtest.single=" . expand("%:t:r") . " test services")<CR>
 
 nnoremap <Leader><Leader><Enter> :Scratch<CR>
 
@@ -487,14 +489,9 @@ map <F5> :!ctags -R
 let g:tagbar_type_groovy = {
 \ 'ctagstype' : 'groovy',
 \ 'kinds'     : [
-    \ 'p:property',
-    \ 'c:class',
-    \ 'i:interface',
     \ 'f:function',
-    \ 'g:function',
+    \ 'd:describe',
     \ 't:specification',
-    \ 'v:private variables',
-    \ 'u:public variables',
 \ ]
 \ }
 
