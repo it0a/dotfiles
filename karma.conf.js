@@ -20,6 +20,7 @@ module.exports = function(config) {
             'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
             'bower_components/jasmine-fixture/dist/jasmine-fixture.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/smartsToo.js',
+            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/optimodal/optimodal.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/accounting/*.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/*.js',
             'develop/streamlinx/SmartsToo2/web-app/js/error/*.js',
