@@ -1,6 +1,18 @@
 {
+    "plugins": [
+        "esformatter-quotes"
+    ],
+    "quotes": {
+        "type": "single",
+        "avoidEscape": false
+    },
     "indent": {
-        "value": "    "
+        "value": "  "
+    },
+    "whiteSpace": {
+        "after": {
+            "FunctionReservedWord": 1
+        }
     }
 }
 
