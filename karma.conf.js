@@ -15,10 +15,12 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'develop/streamlinx/SmartsToo2/web-app/js/lib/angular.min.js',
       'develop/streamlinx/SmartsToo2/web-app/js/lib/*.js',
       'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
       'bower_components/jasmine-fixture/dist/jasmine-fixture.js',
       'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/smartsToo.js',
+      'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/controllers/*.js',
       'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/optimodal/optimodal.js',
       'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/accounting/*.js',
       'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/models/*.js',

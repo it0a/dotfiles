@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Add plugins within this block
+Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'AndrewRadev/switch.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'ScrollColors'
