@@ -1,27 +1,27 @@
 // Karma configuration
 // Generated on Fri Nov 14 2014 20:37:48 GMT-0500 (EST)
 
-module.exports = function(config) {
+module.exports = function (config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
         basePath: '/home/jgonzalez',
 
-
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
         frameworks: ['jasmine'],
 
-
         // list of files / patterns to load in the browser
         files: [
+            'develop/streamlinx/SmartsToo2/web-app/js/lib/angular.min.js',
             'develop/streamlinx/SmartsToo2/web-app/js/lib/*.js',
             'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
             'bower_components/jasmine-fixture/dist/jasmine-fixture.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/smartsToo.js',
+            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/controllers/*.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/optimodal/optimodal.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/accounting/*.js',
-            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/spinject/*.js',
+            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/models/*.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/*.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/viewModels/*.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/masterInvoice/*.js',
@@ -31,10 +31,8 @@ module.exports = function(config) {
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/spec/models/*Spec.js'
         ],
 
-
         // list of files to exclude
-        exclude: [
-        ],
+        exclude: [],
 
 
         // preprocess matching files before serving them to the browser

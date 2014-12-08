@@ -1,5 +1,7 @@
 (setq inhibit-splash-screen t)
 
+(add-to-list 'load-path (expand-file-name "~/elisp"))
+(require 'display-buffer-for-wide-screen)
 (add-to-list 'load-path "~/.emacs.d/plugins/undo-tree")
 (require 'undo-tree)
 (add-to-list 'load-path "~/.emacs.d/org-mode/lisp")
@@ -117,3 +119,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+

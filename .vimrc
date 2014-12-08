@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Add plugins within this block
+Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'AndrewRadev/switch.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'ScrollColors'
@@ -40,6 +41,7 @@ Plugin 'matchit.zip'
 Plugin 'changesqlcase.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mtth/scratch.vim'
+"Plugin 'mephux/vim-jsfmt'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'oblitum/rainbow'
 Plugin 'pangloss/vim-javascript'
@@ -510,3 +512,6 @@ let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_javascript_checkers = ['jslint']
 nnoremap <leader>jm ^wdwIvar _<ESC>pa = <ESC>f{%A;<ESC>
 
+"let g:js_fmt_fail_silently = 1
+"let g:js_fmt_autosave = 1
+"let g:js_fmt_command = "jsfmt"
