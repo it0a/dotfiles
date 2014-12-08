@@ -12,7 +12,7 @@ URxvt.scrollBar: false
 Xft.antialias: true
 Xft.hinting: true
 Xft.hintstyle: hintfull
-Xft.dpi: 220
+Xft.dpi: 96
 Xft.rgba: rgb
 URxvt.font: xft:Inconsolata for Powerline:pixelsize=36
 URxvt.internalBorder: 0

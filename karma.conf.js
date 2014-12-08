@@ -5,7 +5,7 @@ module.exports = function(config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: '/home/it0a',
+        basePath: '/home/jgonzalez',
 
 
         // frameworks to use
@@ -17,13 +17,18 @@ module.exports = function(config) {
         files: [
             'develop/streamlinx/SmartsToo2/web-app/js/lib/*.js',
             'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
-            'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
             'bower_components/jasmine-fixture/dist/jasmine-fixture.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/smartsToo.js',
+            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/optimodal/optimodal.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/accounting/*.js',
+            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/spinject/*.js',
             'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/*.js',
+            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/viewModels/*.js',
+            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/masterInvoice/*.js',
+            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/models/*.js',
             'develop/streamlinx/SmartsToo2/web-app/js/error/*.js',
-            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/spec/*Spec.js'
+            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/spec/*Spec.js',
+            'develop/streamlinx/SmartsToo2/web-app/js/smartsToo/spec/models/*Spec.js'
         ],
 
 

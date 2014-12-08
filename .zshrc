@@ -44,9 +44,11 @@ export PATH="$PATH:$HOME/.bcmt/bin"
 export GOPATH="$HOME/develop/go"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.cabal/bin"
+export NODE_PATH="/home/jgonzalez/npm/lib/node_modules:$NODE_PATH"
 export DATABASE_URL="postgres://it0a@127.0.0.1:5432/last98?sslmode=disable"
 export CHROME_BIN=/usr/bin/google-chrome-stable
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export NODE_PATH="/home/jgonzalez/npm/lib/node_modules"
