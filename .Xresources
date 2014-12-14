@@ -14,7 +14,23 @@ Xft.hinting: true
 Xft.hintstyle: hintfull
 Xft.dpi: 220
 Xft.rgba: rgb
+!URxvt.font: xft:Anonymous Pro for Powerline:pixelsize=36
+!URxvt.font: xft:Bitstream Vera Sans Mono for Powerline:pixelsize=36
+!URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=36
+!URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=36
 URxvt.font: xft:Inconsolata for Powerline:pixelsize=36
+!URxvt.font: xft:Inconsolata\-dz for Powerline:pixelsize=36
+!URxvt.font: xft:Inconsolata\-g for Powerline:pixelsize=36
+!URxvt.font: xft:Liberation Mono for Powerline:pixelsize=36
+!URxvt.font: xft:Meslo LG L DZ for Powerline:pixelsize=36
+!URxvt.font: xft:Meslo LG L for Powerline:pixelsize=36
+!URxvt.font: xft:Meslo LG M DZ for Powerline:pixelsize=36
+!URxvt.font: xft:Meslo LG M for Powerline:pixelsize=36
+!URxvt.font: xft:Meslo LG S DZ for Powerline:pixelsize=36
+!URxvt.font: xft:Meslo LG S for Powerline:pixelsize=36
+!URxvt.font: xft:Source Code Pro for Powerline:pixelsize=36
+!URxvt.font: xft:Terminess Powerline:pixelsize=36:style=bold
+!URxvt.font: xft:Ubuntu Mono derivative Powerline:pixelsize=36
 URxvt.internalBorder: 0
 URxvt.perl-ext: default,url-select
 URxvt.keysym.M-u: perl:url-select:select_next
