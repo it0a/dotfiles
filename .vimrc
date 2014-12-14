@@ -129,6 +129,17 @@ try
 catch
 endtry
 
+if has("gui_running")
+  if has("gui_gtk2")
+    set guioptions -=m
+    set guioptions -=T
+    set guioptions -=r
+    set guioptions +=c
+    set guioptions -=e
+    set guiheadroom=0
+  endif
+endif
+
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -512,3 +523,4 @@ nnoremap <leader>jm ^wdwIvar _<ESC>pa = <ESC>f{%A;<ESC>
 "let g:js_fmt_fail_silently = 1
 "let g:js_fmt_autosave = 1
 "let g:js_fmt_command = "jsfmt"
+"
