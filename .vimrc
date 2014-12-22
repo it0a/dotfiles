@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Add plugins within this block
+Plugin 'calebsmith/vim-lambdify'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'AndrewRadev/switch.vim'
 Plugin 'Lokaltog/vim-easymotion'
@@ -18,6 +19,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'benmills/vimux'
 Plugin 'bling/vim-airline'
 Plugin 'claco/jasmine.vim'
+Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'bilalq/lite-dfm'
 Plugin 'dgryski/vim-godef'
@@ -128,6 +130,17 @@ try
   set stal=2
 catch
 endtry
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guioptions -=m
+    set guioptions -=T
+    set guioptions -=r
+    set guioptions +=c
+    set guioptions -=e
+    set guiheadroom=0
+  endif
+endif
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -288,6 +301,13 @@ set wildignore+=*.png
 set wildignore+=*.jpg
 set wildignore+=*.gif
 set wildignore+=*/Godeps/*
+set wildignore+=*/bower_components/*
+set wildignore+=*/node_modules/*
+set wildignore+=*/web-app/lib/*
+set wildignore+=*/web-app/smartsToo/coverage/*
+set wildignore+=*/web-app/smartsToo/lib/*
+set wildignore+=*/lib/*
+set wildignore+=*/dist/*
 
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
@@ -503,15 +523,13 @@ let g:tagbar_type_groovy = {
 \ }
 
 
-hi TabLine term=bold cterm=bold ctermbg=233 ctermfg=236
-hi TabLineFill term=bold cterm=bold ctermbg=0
-hi TabLineSel term=bold cterm=bold ctermbg=0 ctermfg=189
+"hi TabLine term=bold cterm=bold ctermbg=233 ctermfg=236
+"hi TabLineFill term=bold cterm=bold ctermbg=0
+"hi TabLineSel term=bold cterm=bold ctermbg=0 ctermfg=189
 
 let g:lite_dfm_normal_bg_cterm = 232
 let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_javascript_checkers = ['jslint']
 nnoremap <leader>jm ^wdwIvar _<ESC>pa = <ESC>f{%A;<ESC>
 
-"let g:js_fmt_fail_silently = 1
-"let g:js_fmt_autosave = 1
-"let g:js_fmt_command = "jsfmt"
+let g:used_javascript_libs = 'underscore,angularjs,jasmine'

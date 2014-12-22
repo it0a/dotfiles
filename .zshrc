@@ -31,7 +31,7 @@ export GRADLE_HOME=$HOME/.gvm/gradle/current
 alias bcmt="$HOME/develop/streamlinx/bcmt/bin/bcmt"
 alias grails="$GRAILS_HOME/bin/grails"
 alias gradle="$GRADLE_HOME/bin/gradle"
-alias decurse="curl -F \"dump=<-\" http://www.decur.se/d"
+#alias decurse="curl -F \"dump=<-\" http://www.decur.se/d"
 alias egc="vim $HOME/.grails/SmartsToo-config.groovy"
 alias s2d="cd $HOME/develop/streamlinx && vim"
 alias rs2m="$HOME/usefulscripts/rs2m.sh"
@@ -42,9 +42,11 @@ export PATH="$PATH:/home/jgonzalez/develop/streamlinx/SmartsToo2/src/groovy/post
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.bcmt/bin"
 export GOPATH="$HOME/develop/go"
+export GOBIN="$HOME/develop/go/bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.cabal/bin"
 export NODE_PATH="/home/jgonzalez/npm/lib/node_modules:$NODE_PATH"
+export PATH="$PATH:/usr/bin/node"
 export DATABASE_URL="postgres://it0a@127.0.0.1:5432/last98?sslmode=disable"
 export CHROME_BIN=/usr/bin/google-chrome-stable
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

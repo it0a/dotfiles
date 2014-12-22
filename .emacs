@@ -16,6 +16,7 @@
       ("REPORT" :foreground "brightblue" :weight bold)
       ("BUG" :foreground "color-124" :weight bold)
       ("KNOWNCAUSE" :foreground "purple" :weight bold)
+      ("DESIGN" :foreground "purple" :weight bold)
       ("FIXED" :foreground "forest green" :weight bold)
       ("WONT FIX" :foreground "lime green" :weight bold)
       ("NEXT" :foreground "cyan" :weight bold)
@@ -31,15 +32,15 @@
 (setq org-agenda-files (file-expand-wildcards "~/org/*.org"))
 
 (setq org-agenda-custom-commands
-      '(("Q" . "Custom queries") ;; gives label to "Q" 
+      '(("Q" . "Custom queries") ;; gives label to "Q"
         ("Qa" "Archive search" search ""
-         ((org-agenda-files (file-expand-wildcards "~/archive/*.org")))) 
+         ((org-agenda-files (file-expand-wildcards "~/archive/*.org"))))
         ("Qw" "Website search" search ""
          ((org-agenda-files (file-expand-wildcards "~/website/*.org"))))
         ("Qb" "Projects and Archive" search ""
          ((org-agenda-text-search-extra-files (file-expand-wildcards "~/archive/*.org"))))
         ;; searches both projects and archive directories
-        ("QA" "Archive tags search" org-tags-view "" 
+        ("QA" "Archive tags search" org-tags-view ""
          ((org-agenda-files (file-expand-wildcards "~/archive/*.org"))))
         ;; ...other commands here
         ))
@@ -47,6 +48,7 @@
 
  (setq org-todo-keywords
   '((sequence "TODO"
+      "DESIGN"
       "MAYBE"
       "NEXT"
       "STARTED"
@@ -57,11 +59,11 @@
       "DONE"
       "DEFERRED"
       "CANCELED")
-    (sequence "REPORT(r)" 
-        "BUG(b)" 
-        "KNOWNCAUSE(k)" 
-        "|" 
-        "FIXED(f)" 
+    (sequence "REPORT(r)"
+        "BUG(b)"
+        "KNOWNCAUSE(k)"
+        "|"
+        "FIXED(f)"
         "WONTFIX(x)")
     ))
 
@@ -91,11 +93,11 @@
 (key-chord-define evil-insert-state-map  "jk" 'evil-normal-state)
 
 (add-to-list 'load-path "~/.emacs.d/plugins/org-jira")
-(setq jiralib-url "https://streamlinx.atlassian.net/") 
-;; you need make sure whether the "/jira" at the end is 
+(setq jiralib-url "https://streamlinx.atlassian.net/")
+;; you need make sure whether the "/jira" at the end is
 ;; necessary or not, see discussion at the end of this page
 
-(require 'org-jira) 
+(require 'org-jira)
 ;; jiralib is not explicitly required, since org-jira will load it.
 
 ;;; esc quits
