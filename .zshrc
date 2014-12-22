@@ -31,7 +31,7 @@ export GRADLE_HOME=$HOME/.gvm/gradle/current
 alias bcmt="$HOME/develop/streamlinx/bcmt/bin/bcmt"
 alias grails="$GRAILS_HOME/bin/grails"
 alias gradle="$GRADLE_HOME/bin/gradle"
-alias decurse="curl -F \"dump=<-\" http://www.decur.se/d"
+#alias decurse="curl -F \"dump=<-\" http://www.decur.se/d"
 alias egc="vim $HOME/.grails/SmartsToo-config.groovy"
 alias s2d="cd $HOME/develop/streamlinx && vim"
 alias rs2m="$HOME/usefulscripts/rs2m.sh"
