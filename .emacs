@@ -16,6 +16,7 @@
       ("REPORT" :foreground "brightblue" :weight bold)
       ("BUG" :foreground "color-124" :weight bold)
       ("KNOWNCAUSE" :foreground "purple" :weight bold)
+      ("PERF" :foreground "color-123" :weight bold)
       ("DESIGN" :foreground "purple" :weight bold)
       ("FIXED" :foreground "forest green" :weight bold)
       ("WONT FIX" :foreground "lime green" :weight bold)
@@ -55,6 +56,7 @@
       "WAITING"
       "DELEGATED"
       "UNTESTED"
+      "PERF"
       "|"
       "DONE"
       "DEFERRED"
