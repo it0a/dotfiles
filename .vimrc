@@ -306,7 +306,6 @@ set wildignore+=*/node_modules/*
 set wildignore+=*/web-app/lib/*
 set wildignore+=*/web-app/smartsToo/coverage/*
 set wildignore+=*/web-app/smartsToo/lib/*
-set wildignore+=*/lib/*
 set wildignore+=*/dist/*
 
 " vim-easy-align
