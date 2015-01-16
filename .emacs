@@ -1,7 +1,6 @@
 (setq inhibit-splash-screen t)
 
 (add-to-list 'load-path (expand-file-name "~/elisp"))
-(require 'display-buffer-for-wide-screen)
 (add-to-list 'load-path "~/.emacs.d/plugins/undo-tree")
 (require 'undo-tree)
 (add-to-list 'load-path "~/.emacs.d/org-mode/lisp")

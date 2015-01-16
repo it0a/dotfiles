@@ -73,6 +73,7 @@ set history=700
 set term=screen-256color
 set t_Co=256
 set background=dark
+"colo radicalgoodspeed
 colo ir_black
 set autoread
 set cursorline
