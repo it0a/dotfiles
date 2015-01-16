@@ -36,7 +36,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'marijnh/tern_for_vim'
+"Plugin 'marijnh/tern_for_vim'
 Plugin 'mkitt/tabline.vim'
 Plugin 'NathanNeff/grails-vim'
 Plugin 'matchit.zip'
@@ -388,8 +388,6 @@ call unite#custom#source('file_rec,file_rec/async,file_mru,file,buffer,grep',
 \ '\.jar$',
 \ 'target/',
 \ 'apps/',
-\ 'SmartsToo2/db-scripts/',
-\ 'SmartsToo2/migrations/',
 \ 'SmartsTooMetaData/',
 \ 'node_modules/', 'log/', 'tmp/', 'obj/',
 \ '/vendor/gems/', '/vendor/cache/', '\.bundle/', '\.sass-cache/',

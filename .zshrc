@@ -25,6 +25,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias S2FFI="mysql -u root -p smarts_too_dallas_07142014 < $HOME/develop/streamlinx/SmartsToo2/grails-app/conf/db-scripts/full_financial_import.sql"
 alias tmux="tmux -2"
 export GRAILS_HOME=$HOME/.gvm/grails/current
 export GRADLE_HOME=$HOME/.gvm/gradle/current
