@@ -54,4 +54,3 @@ export CHROME_BIN=/usr/bin/google-chrome-stable
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export NODE_PATH="/home/jgonzalez/npm/lib/node_modules"
