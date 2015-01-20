@@ -25,6 +25,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias S2FFI="$HOME/develop/streamlinx/SmartsToo2/grails-app/conf/db-scripts/S1Import"
 alias tmux="tmux -2"
 export GRAILS_HOME=$HOME/.gvm/grails/current
 export GRADLE_HOME=$HOME/.gvm/gradle/current
@@ -46,6 +47,7 @@ export GOPATH="$HOME/develop/go"
 export GOBIN="$HOME/develop/go/bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.cabal/bin"
+export NODE_PATH="/home/jgonzalez/npm/lib/node_modules:$NODE_PATH"
 export PATH="$PATH:/usr/bin/node"
 export DATABASE_URL="postgres://it0a@127.0.0.1:5432/last98?sslmode=disable"
 export CHROME_BIN=/usr/bin/google-chrome-stable

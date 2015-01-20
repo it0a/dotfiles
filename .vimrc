@@ -36,7 +36,7 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'marijnh/tern_for_vim'
+"Plugin 'marijnh/tern_for_vim'
 Plugin 'mkitt/tabline.vim'
 Plugin 'NathanNeff/grails-vim'
 Plugin 'matchit.zip'
@@ -369,7 +369,7 @@ nnoremap <Leader>?? :SyntasticCheck<CR>
 
 " Unite
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_command = '/home/jgonzalez/build/the_silver_searcher/ag'
 let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden --ignore-case --ignore tags'
 let g:unite_source_grep_recursive_opt = ''
 let g:unite_enable_start_insert=1
@@ -388,6 +388,7 @@ call unite#custom#source('file_rec,file_rec/async,file_mru,file,buffer,grep',
 \ '\.jar$',
 \ 'target/',
 \ 'apps/',
+\ 'SmartsTooMetaData/',
 \ 'node_modules/', 'log/', 'tmp/', 'obj/',
 \ '/vendor/gems/', '/vendor/cache/', '\.bundle/', '\.sass-cache/',
 \ '/tmp/cache/assets/.*/sprockets/', '/tmp/cache/assets/.*/sass/',
