@@ -38,6 +38,7 @@ alias rs2m="$HOME/usefulscripts/rs2m.sh"
 alias s2ut="gradle --project-dir $HOME/develop/TestRunner -I $HOME/develop/TestRunner/init.gradle test"
 alias vi=vim
 alias bower='noglob bower'
+alias S2I="$HOME/develop/streamlinx/SmartsToo2/grails-app/conf/db-scripts/S1Import"
 export PATH="$PATH:/home/jgonzalez/develop/streamlinx/SmartsToo2/src/groovy/postCode.groovy" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.bcmt/bin"
