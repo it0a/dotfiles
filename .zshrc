@@ -1,4 +1,7 @@
 #!/bin/zsh
+export HISTSIZE=99999
+export SAVEHIST=99999
+export HISTFILE=~/.zsh_history
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="flazz"
 # DISABLE_AUTO_TITLE="true"
