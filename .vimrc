@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Add plugins within this block
+Plugin 'dahu/Nexus'
 Plugin 'calebsmith/vim-lambdify'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'AndrewRadev/switch.vim'
