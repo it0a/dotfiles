@@ -12,7 +12,7 @@ URxvt.scrollBar: false
 Xft.antialias: true
 Xft.hinting: true
 Xft.hintstyle: hintfull
-Xft.dpi: 96
+Xft.dpi: 220
 Xft.rgba: rgb
 !URxvt.font: xft:Anonymous Pro for Powerline:pixelsize=36
 !URxvt.font: xft:Monofur for Powerline:pixelsize=36

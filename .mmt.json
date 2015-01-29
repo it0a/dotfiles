@@ -13,7 +13,7 @@
     "tableProfiles": [
         {
             "name": "default",
-            "dumpDir": "/home/jgonzalez/develop/streamlinx/SmartsTooMetaData",
+            "dumpDir": "/home/it0a/develop/streamlinx/SmartsTooMetaData",
             "tables": [
                 {
                     "name": "domain_meta_data"
@@ -116,9 +116,6 @@
                 },
                 {
                     "name": "area_field_set_property"
-                },
-                {
-                    "name": "template_store"
                 },
                 {
                     "name": "service_frequency"
