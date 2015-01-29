@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Add plugins within this block
+Plugin 'krisajenkins/vim-pipe'
 Plugin 'calebsmith/vim-lambdify'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'AndrewRadev/switch.vim'
@@ -319,9 +320,9 @@ au BufRead,BufNewFile *.gsp set filetype=html
 
 map <SPACE> <Plug>(easymotion-s2)
 
-nnoremap <F9> :VimuxRunCommand "gradle --project-dir ~/develop/TestRunner -I ~/develop/TestRunner/init.gradle test"<CR>
-nnoremap <F7> :call VimuxRunCommand("gradle --project-dir ~/develop/TestRunner -I ~/develop/TestRunner/init.gradle -Dtest.single=" . expand("%:t:r") . " test")<CR>
-nnoremap <F6> :call VimuxRunCommand("gradle --project-dir ~/develop/TestRunner -I ~/develop/TestRunner/init.gradle -Dtest.single=" . expand("%:t:r") . " test services")<CR>
+nnoremap <F9> :VimuxRunCommand "gradle --project-dir ~/develop/spock/speckr -I ~/develop/spock/speckr/init.gradle test"<CR>
+nnoremap <F7> :call VimuxRunCommand("gradle --project-dir ~/develop/spock/speckr -I ~/develop/spock/speckr/init.gradle -Dtest.single=" . expand("%:t:r") . " test")<CR>
+nnoremap <F6> :call VimuxRunCommand("gradle --project-dir ~/develop/spock/speckr -I ~/develop/spock/speckr/init.gradle -Dtest.single=" . expand("%:t:r") . " test services")<CR>
 
 nnoremap <Leader><Leader><Enter> :Scratch<CR>
 
@@ -531,3 +532,11 @@ let g:syntastic_javascript_checkers = ['jslint']
 nnoremap <leader>jm ^wdwIvar _<ESC>pa = <ESC>f{%A;<ESC>
 
 let g:used_javascript_libs = 'underscore,angularjs,jasmine'
+
+
+let g:vimpipe_silent=1
+let maplocalleader = "\\"
+
+"%s/hello\(\S\)/hello\U\1/g
+"
+inoreabbrev S** SELECT * FROM

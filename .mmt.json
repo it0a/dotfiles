@@ -3,8 +3,8 @@
         {
             "name": "local",
             "dbConfig": {
-                "host": "10.221.3.242",
-                "port": "3309",
+                "host": "10.0.8.182",
+                "port": "3306",
                 "user": "root",
                 "schema": "smarts_too_dallas_07142014"
             }
@@ -146,6 +146,9 @@
                 },
                 {
                     "name": "service_type"
+                },
+                {
+                    "name": "schedule_job_action"
                 }
             ]
         }
