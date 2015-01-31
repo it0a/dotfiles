@@ -27,7 +27,8 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+alias nx="sudo netctl stop-all"
+alias ns="sudo netctl start"
 alias S2FFI="~/develop/streamlinx/SmartsToo2/grails-app/conf/db-scripts/S1Import"
 alias tmux="tmux -2"
 export GRAILS_HOME=$HOME/.gvm/grails/current
