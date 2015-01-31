@@ -29,6 +29,7 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nx="sudo netctl stop-all"
 alias ns="sudo netctl start"
+alias c="clear"
 alias S2FFI="~/develop/streamlinx/SmartsToo2/grails-app/conf/db-scripts/S1Import"
 alias tmux="tmux -2"
 export GRAILS_HOME=$HOME/.gvm/grails/current
