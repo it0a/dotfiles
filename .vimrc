@@ -455,7 +455,7 @@ let g:syntastic_eruby_ruby_exec = 'ruby'
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype htmlcheetah setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
-autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype eruby setlocal ts=2 sw=2 noexpandtab
 
 
@@ -529,7 +529,7 @@ let g:tagbar_type_groovy = {
 
 let g:lite_dfm_normal_bg_cterm = 232
 let g:syntastic_sh_checkers = ['shellcheck']
-let g:syntastic_javascript_checkers = ['jslint']
+let g:syntastic_javascript_checkers = ['jshint']
 nnoremap <leader>jm ^wdwIvar _<ESC>pa = <ESC>f{%A;<ESC>
 
 let g:used_javascript_libs = 'underscore,angularjs,jasmine'
