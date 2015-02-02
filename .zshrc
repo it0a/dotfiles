@@ -30,6 +30,7 @@ export EDITOR='vim'
 alias nx="sudo netctl stop-all"
 alias ns="sudo netctl start"
 alias c="clear"
+alias v="vim"
 alias sc="scrot"
 alias S2FFI="~/develop/streamlinx/SmartsToo2/grails-app/conf/db-scripts/S1Import"
 alias tmux="tmux -2"
