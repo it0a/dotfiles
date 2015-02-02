@@ -37,6 +37,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'junegunn/limelight.vim'
+Plugin 'junegunn/goyo.vim'
 Plugin 'majutsushi/tagbar'
 "Plugin 'marijnh/tern_for_vim'
 Plugin 'mkitt/tabline.vim'
@@ -352,7 +353,7 @@ let g:tmuxline_preset = {
       \'c'    : [''],
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W', '#F'],
-      \'x'    : '#(date)',
+      \'x'    : '#(~/usefulscripts/timefmt.sh)',
       \'y'    : ['#(whoami)'],
       \'z'    : '#h'}
 
