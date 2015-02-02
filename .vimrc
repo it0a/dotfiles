@@ -353,9 +353,8 @@ let g:tmuxline_preset = {
       \'c'    : [''],
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W', '#F'],
-      \'x'    : '#(~/usefulscripts/timefmt.sh)',
-      \'y'    : ['#(whoami)'],
-      \'z'    : '#h'}
+      \'y'    : '#(~/usefulscripts/timefmt.sh)',
+      \'z'    : "#(date | awk '{print $4}')"}
 
 let g:agformat="%f:%l:%m"
 
