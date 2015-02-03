@@ -46,7 +46,7 @@ Plugin 'matchit.zip'
 Plugin 'changesqlcase.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mtth/scratch.vim'
-"Plugin 'mephux/vim-jsfmt'
+Plugin 'mephux/vim-jsfmt'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'oblitum/rainbow'
 Plugin 'pangloss/vim-javascript'
@@ -541,3 +541,4 @@ let maplocalleader = "\\"
 "%s/hello\(\S\)/hello\U\1/g
 "
 inoreabbrev S** SELECT * FROM
+inoreabbrev IJ INNER JOIN
