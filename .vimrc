@@ -46,7 +46,7 @@ Plugin 'matchit.zip'
 Plugin 'changesqlcase.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mtth/scratch.vim'
-Plugin 'mephux/vim-jsfmt'
+"Plugin 'mephux/vim-jsfmt'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'oblitum/rainbow'
 Plugin 'pangloss/vim-javascript'
@@ -542,3 +542,9 @@ let maplocalleader = "\\"
 "
 inoreabbrev S** SELECT * FROM
 inoreabbrev IJ INNER JOIN
+
+"let g:js_fmt_command = "jsfmt"
+"let g:js_fmt_autosave = 1
+"
+
+inoremap \fn <C-R>=expand("%:t:r")<CR>
