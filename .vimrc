@@ -542,3 +542,10 @@ let maplocalleader = "\\"
 "%s/hello\(\S\)/hello\U\1/g
 "
 inoreabbrev S** SELECT * FROM
+inoreabbrev IJ INNER JOIN
+
+"let g:js_fmt_command = "jsfmt"
+"let g:js_fmt_autosave = 1
+"
+
+inoremap \fn <C-R>=expand("%:t:r")<CR>
