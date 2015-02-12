@@ -1,5 +1,12 @@
 (setq inhibit-splash-screen t)
 
+(require 'package)
+(add-to-list 'package-archives
+                          '("melpa" . "http://melpa.org/packages/") t)
+(when (< emacs-major-version 24)
+      (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
 (add-to-list 'load-path (expand-file-name "~/elisp"))
 (add-to-list 'load-path "~/.emacs.d/plugins/undo-tree")
 (require 'undo-tree)

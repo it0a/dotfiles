@@ -56,10 +56,11 @@ export GOBIN="$HOME/develop/go/bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:~/.cabal/bin"
 export S2W="$HOME/develop/streamlinx/SmartsToo2/web-app/smartsToo/"
-export NODE_PATH="/home/jgonzalez/npm/lib/node_modules:$NODE_PATH"
 export PATH="$PATH:/usr/bin/node"
 export DATABASE_URL="postgres://it0a@127.0.0.1:5432/last98?sslmode=disable"
 export CHROME_BIN=/usr/bin/google-chrome-stable
+export NODE_PATH=$NODE_PATH:/usr/lib/node_modules
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"

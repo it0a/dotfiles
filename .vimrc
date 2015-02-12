@@ -4,6 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Add plugins within this block
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-leiningen'
 Plugin 'lervag/vim-latex'
 Plugin 'krisajenkins/vim-pipe'
 Plugin 'dahu/Nexus'
