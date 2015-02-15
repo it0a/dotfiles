@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Add plugins within this block
+Plugin 'jpalardy/vim-slime'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
 Plugin 'lervag/vim-latex'
@@ -551,3 +552,5 @@ inoreabbrev IJ INNER JOIN
 "
 
 inoremap \fn <C-R>=expand("%:t:r")<CR>
+
+let g:slime_target = "tmux"
