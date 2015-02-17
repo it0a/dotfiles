@@ -1,0 +1,12 @@
+maxima=maxima
+helpFile=/usr/share/maxima/5.35.1/doc/html/header.hhp
+ShowTips=1
+tipNum=2
+pos-x=0
+pos-y=0
+pos-w=3200
+pos-h=1800
+pos-max=0
+[AUI]
+perspective=layout2|name=console;caption=;state=508;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=4;besth=4;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=history;caption=History;state=2099150;dir=2;layer=0;row=0;pos=0;prop=100000;bestw=84;besth=182;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=stats;caption=Statistics;state=2098894;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=506;besth=620;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=math;caption=General Math;state=2098894;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=484;besth=450;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=format;caption=Insert;state=2098894;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=398;besth=150;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=10|
+toolbar=1
