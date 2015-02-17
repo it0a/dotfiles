@@ -3,7 +3,7 @@
         {
             "name": "local",
             "dbConfig": {
-                "host": "10.0.8.182",
+                "host": "10.0.8.189",
                 "port": "3306",
                 "user": "root",
                 "schema": "smarts_too_dallas_07142014"
