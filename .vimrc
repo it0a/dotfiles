@@ -304,9 +304,7 @@ vnoremap <silent> # :<C-U>
 "set colorcolumn=80
 "highlight ColorColumn ctermbg=9
 
-set wildignore+=*.png
-set wildignore+=*.jpg
-set wildignore+=*.gif
+set wildignore+=*.png,*.jpg,*.gif,*.ogg,*.webm,*.avi,*.mp3,*.mp4,*.wmv,*.wav,*.mov
 set wildignore+=*/Godeps/*
 set wildignore+=*/bower_components/*
 set wildignore+=*/node_modules/*
