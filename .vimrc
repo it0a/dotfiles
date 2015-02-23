@@ -33,7 +33,6 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'elzr/vim-json'
 Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'honza/vim-snippets'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'godlygeek/csapprox'
@@ -43,14 +42,12 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'majutsushi/tagbar'
-"Plugin 'marijnh/tern_for_vim'
 Plugin 'mkitt/tabline.vim'
 Plugin 'NathanNeff/grails-vim'
 Plugin 'matchit.zip'
 Plugin 'changesqlcase.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'mtth/scratch.vim'
-"Plugin 'mephux/vim-jsfmt'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'oblitum/rainbow'
 Plugin 'pangloss/vim-javascript'
@@ -68,6 +65,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-scripts/dbext.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'wincent/Command-T'
+"Plugin 'marijnh/tern_for_vim'
+"Plugin 'mephux/vim-jsfmt'
 "
 call vundle#end()
 filetype plugin indent on
@@ -332,7 +331,6 @@ nnoremap <F6> :call VimuxRunCommand("gradle --project-dir ~/develop/spock/speckr
 
 nnoremap <Leader><Leader><Enter> :Scratch<CR>
 
-       
 let g:rainbow_active = 1
 let g:rainbow_load_separately = [
     \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
@@ -477,10 +475,6 @@ endif
 
 nnoremap <Leader>z :LiteDFMToggle<CR>:silent !tmux set status > /dev/null 2>&1<CR>:redraw!<CR>
 
-
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
@@ -500,10 +494,10 @@ function! g:UltiSnips_Complete()
 endfunction
 
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-a>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsListSnippets="<c-e>"
-" this mapping Enter key to <C-y> to chose the current highlight item 
-" and close the selection list, same as other IDEs.
 " CONFLICT with some plugins like tpope/Endwise
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
@@ -513,8 +507,6 @@ let g:UltisnipsSnippetDirectories=['Ultisnips', 'snippets']
 vmap <leader>uc :call ChangeSqlCase()<CR>
 
 let g:golang_goroot = "~/develop/go"
-
-map <F5> :!ctags -R
 
 " tagbar support for groovy
 let g:tagbar_type_groovy = {
@@ -526,11 +518,6 @@ let g:tagbar_type_groovy = {
 \ ]
 \ }
 
-
-"hi TabLine term=bold cterm=bold ctermbg=233 ctermfg=236
-"hi TabLineFill term=bold cterm=bold ctermbg=0
-"hi TabLineSel term=bold cterm=bold ctermbg=0 ctermfg=189
-
 let g:lite_dfm_normal_bg_cterm = 232
 let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_javascript_checkers = ['jshint']
@@ -538,18 +525,11 @@ nnoremap <leader>jm ^wdwIvar _<ESC>pa = <ESC>f{%A;<ESC>
 
 let g:used_javascript_libs = 'underscore,angularjs,jasmine'
 
-
 let g:vimpipe_silent=1
 let maplocalleader = "\\"
 
-"%s/hello\(\S\)/hello\U\1/g
-"
 inoreabbrev S** SELECT * FROM
 inoreabbrev IJ INNER JOIN
-
-"let g:js_fmt_command = "jsfmt"
-"let g:js_fmt_autosave = 1
-"
 
 inoremap \fn <C-R>=expand("%:t:r")<CR>
 
