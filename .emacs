@@ -77,7 +77,6 @@
 
 
 (setq org-log-done 'time)
-(setq org-log-done 'note)
 
 (add-to-list 'load-path "~/.emacs.d/plugins/elscreen")
 (require 'elscreen)
