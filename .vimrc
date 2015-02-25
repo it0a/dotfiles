@@ -306,8 +306,7 @@ vnoremap <silent> # :<C-U>
 
 set wildignore+=*.png,*.jpg,*.gif,*.ogg,*.webm,*.avi,*.mp3,*.mp4,*.wmv,*.wav,*.mov
 set wildignore+=*/Godeps/*
-set wildignore+=*/bower_components/*
-set wildignore+=*/node_modules/*
+set wildignore+=*/bower_components/*,*/node_modules/*
 set wildignore+=*/web-app/lib/*
 set wildignore+=*/web-app/smartsToo/coverage/*
 set wildignore+=*/web-app/smartsToo/lib/*
