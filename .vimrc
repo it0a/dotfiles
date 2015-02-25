@@ -554,3 +554,4 @@ inoreabbrev IJ INNER JOIN
 inoremap \fn <C-R>=expand("%:t:r")<CR>
 
 let g:slime_target = "tmux"
+
