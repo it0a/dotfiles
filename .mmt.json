@@ -13,7 +13,7 @@
     "tableProfiles": [
         {
             "name": "default",
-            "dumpDir": "/home/it0a/develop/streamlinx/SmartsTooMetaData",
+            "dumpDir": "~/develop/streamlinx/SmartsTooMetaData",
             "tables": [
                 {
                     "name": "domain_meta_data"
