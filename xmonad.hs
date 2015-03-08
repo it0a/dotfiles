@@ -5,3 +5,4 @@ main = xmonad defaultConfig
         , terminal = "urxvt"
         -- more changes
         }
+
