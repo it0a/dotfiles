@@ -12,12 +12,12 @@ URxvt.scrollBar: false
 Xft.antialias: true
 Xft.hinting: true
 Xft.hintstyle: hintfull
-Xft.dpi: 220
+Xft.dpi: 96
 Xft.rgba: rgb
 !URxvt.font: xft:Anonymous Pro for Powerline:pixelsize=36
 !URxvt.font: xft:Monofur for Powerline:pixelsize=36
 !URxvt.font: xft:Bitstream Vera Sans Mono for Powerline:pixelsize=36
-URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=36
+URxvt.font: xft:DejaVu Sans Mono for Powerline:pixelsize=24
 !URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=36
 !URxvt.font: xft:Inconsolata for Powerline:pixelsize=36
 !URxvt.font: xft:Terminus (TTF) for Powerline:pixelsize=36

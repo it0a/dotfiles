@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Add plugins within this block
+Plugin 'esneider/YUNOcommit.vim'
 Plugin 'jpalardy/vim-slime'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
@@ -43,7 +44,6 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mkitt/tabline.vim'
-Plugin 'NathanNeff/grails-vim'
 Plugin 'matchit.zip'
 Plugin 'changesqlcase.vim'
 Plugin 'mattn/emmet-vim'
@@ -311,6 +311,7 @@ set wildignore+=*/web-app/lib/*
 set wildignore+=*/web-app/smartsToo/coverage/*
 set wildignore+=*/web-app/smartsToo/lib/*
 set wildignore+=*/dist/*
+set wildignore+=*/target/*
 
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
@@ -531,4 +532,9 @@ inoreabbrev IJ INNER JOIN
 inoremap \fn <C-R>=expand("%:t:r")<CR>
 
 let g:slime_target = "tmux"
+
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+
+let g:YUNOcommit_after = 15
 

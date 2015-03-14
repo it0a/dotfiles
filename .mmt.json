@@ -16,6 +16,9 @@
             "dumpDir": "/home/jgonzalez/develop/streamlinx/SmartsTooMetaData",
             "tables": [
                 {
+                    "name": "requestmap"
+                },
+                {
                     "name": "domain_meta_data"
                 },
                 {
@@ -142,12 +145,6 @@
                     "name": "select_list_option"
                 },
                 {
-                    "name": "service_type"
-                },
-                {
-                    "name": "schedule_job_action"
-                },
-                {
                     "name": "glaccount"
                 },
                 {
@@ -155,6 +152,12 @@
                 },
                 {
                     "name": "gltransaction_type_property"
+                },
+                {
+                    "name": "service_type"
+                },
+                {
+                    "name": "schedule_job_action"
                 }
             ]
         }
