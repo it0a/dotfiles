@@ -310,7 +310,6 @@ set wildignore+=*/bower_components/*,*/node_modules/*
 set wildignore+=*/web-app/lib/*
 set wildignore+=*/web-app/smartsToo/coverage/*
 set wildignore+=*/web-app/smartsToo/lib/*
-set wildignore+=*/dist/*
 set wildignore+=*/target/*
 
 " vim-easy-align
