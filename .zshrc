@@ -29,6 +29,7 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nx="sudo netctl stop-all"
 alias ns="sudo netctl start"
+alias n="nx && ns"
 alias c="clear"
 alias v="vim"
 alias sc="scrot"
