@@ -3,17 +3,17 @@
         {
             "name": "local",
             "dbConfig": {
-                "host": "127.0.0.1",
+                "host": "10.0.8.182",
                 "port": "3306",
                 "user": "root",
-                "schema": "smarts_too_dallas_07142014"
+                "schema": "smarts_too_dallas"
             }
         }
     ],
     "tableProfiles": [
         {
             "name": "default",
-            "dumpDir": "~/develop/streamlinx/SmartsTooMetaData",
+            "dumpDir": "/home/jgonzalez/develop/streamlinx/SmartsTooMetaData",
             "tables": [
                 {
                     "name": "requestmap"
