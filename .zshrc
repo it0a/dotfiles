@@ -41,6 +41,7 @@ export GRADLE_HOME=$HOME/.gvm/gradle/current
 alias bcmt="~/develop/streamlinx/bcmt/bin/bcmt"
 alias grails="$GRAILS_HOME/bin/grails"
 alias gradle="$GRADLE_HOME/bin/gradle"
+alias lein="~/bin/lein"
 #alias decurse="curl -F \"dump=<-\" http://www.decur.se/d"
 alias egc="vim $HOME/.grails/SmartsToo-config.groovy"
 alias s2d="cd $HOME/develop/streamlinx && vim"
@@ -54,6 +55,7 @@ export PATH="$PATH:/home/jgonzalez/develop/streamlinx/SmartsToo2/src/groovy/post
 export PATH="$PATH:~/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:~/.bcmt/bin"
 export PATH="$PATH:$GROOVY_HOME/bin"
+export PATH="$PATH:~/bin/lein"
 export GOPATH="$HOME/develop/go"
 export GOBIN="$HOME/develop/go/bin"
 export PATH="$PATH:$GOPATH/bin"
@@ -63,6 +65,8 @@ export PATH="$PATH:/usr/bin/node"
 export DATABASE_URL="postgres://it0a@127.0.0.1:5432/last98?sslmode=disable"
 export CHROME_BIN=/usr/bin/google-chrome-stable
 export NODE_PATH=$NODE_PATH:/usr/lib/node_modules
+export FZF_COMPLETION_TRIGGER='~~'
+zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!

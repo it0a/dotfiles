@@ -133,6 +133,9 @@
                     "name": "tenant_base"
                 },
                 {
+                    "name": "tenant_location_base"
+                },
+                {
                     "name": "field_option"
                 },
                 {
