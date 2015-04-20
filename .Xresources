@@ -6,7 +6,7 @@ URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 URxvt*termName: rxvt-unicode-256color
 URxvt.transparent: true
-URxvt*shading: 30
+URxvt*shading: 100
 URxvt.background: #080808
 URxvt.scrollBar: false
 Xft.antialias: true
