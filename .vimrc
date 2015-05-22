@@ -80,12 +80,12 @@ set term=screen-256color
 set t_Co=256
 set background=dark
 "colo radicalgoodspeed
-colo ir_black
+colo jellyx
 set autoread
 set cursorline
 set so=7
 set wildmenu
-set wildignore=*.o,*~,*.pyc
+set wildignore=*.o,*~,*.pyc,*.class,*.class.*
 set ruler
 set cmdheight=1
 set hid
@@ -306,7 +306,7 @@ vnoremap <silent> # :<C-U>
 
 set wildignore+=*.png,*.jpg,*.gif,*.ogg,*.webm,*.avi,*.mp3,*.mp4,*.wmv,*.wav,*.mov,*.jar,*.war
 set wildignore+=*/Godeps/*
-set wildignore+=*/bower_components/*,*/node_modules/*
+set wildignore+=*/bower_components/*,*/node_modules/*,*/lib/*
 set wildignore+=*/web-app/lib/*
 set wildignore+=*/web-app/smartsToo/coverage/*
 set wildignore+=*/web-app/smartsToo/lib/*
@@ -538,3 +538,4 @@ nnoremap <leader>gc :Gcommit<CR>
 
 let g:YUNOcommit_after = 15
 
+inoreabbrev nsproc DELIMITER $$<CR>DROP PROCEDURE IF EXISTS proc_ProcName $$<CR>CREATE PROCEDURE proc_ProcName()<CR>BEGIN<CR>END $$<CR>DELIMITER ;<CR>

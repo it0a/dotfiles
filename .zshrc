@@ -50,6 +50,7 @@ alias vi=vim
 alias bower='noglob bower'
 alias ppjson='python -m json.tool'
 alias s2sc='~/develop/streamlinx/SmartsToo2/web-app/smartsToo/scaffold/scaffold'
+export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/home/jgonzalez/develop/streamlinx/SmartsToo2/src/groovy/postCode.groovy" # Add RVM to PATH for scripting
 export PATH="$PATH:~/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:~/.bcmt/bin"
