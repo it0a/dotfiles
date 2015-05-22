@@ -27,6 +27,8 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias fuck='eval $(thefuck $(fc -ln -1))'
+alias FUCK='fuck'
 alias nx="sudo netctl stop-all"
 alias ns="sudo netctl start"
 alias n="nx && ns"
@@ -55,11 +57,11 @@ export PATH="$PATH:/home/jgonzalez/develop/streamlinx/SmartsToo2/src/groovy/post
 export PATH="$PATH:~/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:~/.bcmt/bin"
 export PATH="$PATH:$GROOVY_HOME/bin"
-export PATH="$PATH:~/bin/lein"
 export GOPATH="$HOME/develop/go"
 export GOBIN="$HOME/develop/go/bin"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:~/.cabal/bin"
+export PATH="$PATH:$HOME/bin"
 export S2W="$HOME/develop/streamlinx/SmartsToo2/web-app/smartsToo/"
 export PATH="$PATH:/usr/bin/node"
 export DATABASE_URL="postgres://it0a@127.0.0.1:5432/last98?sslmode=disable"
