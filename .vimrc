@@ -64,7 +64,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-scripts/dbext.vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'wincent/Command-T'
 "Plugin 'marijnh/tern_for_vim'
 "Plugin 'mephux/vim-jsfmt'
 "
@@ -539,3 +538,10 @@ nnoremap <leader>gc :Gcommit<CR>
 let g:YUNOcommit_after = 15
 
 inoreabbrev nsproc DELIMITER $$<CR>DROP PROCEDURE IF EXISTS proc_ProcName $$<CR>CREATE PROCEDURE proc_ProcName()<CR>BEGIN<CR>END $$<CR>DELIMITER ;<CR>
+
+set rtp+=~/.fzf
+
+command! -nargs=1 Locate call fzf#run(
+      \ {'source': 'locate <q-args>', 'sink': 'e', 'options': '-m'})
+
+nnoremap <leader>t :FZF<CR>
