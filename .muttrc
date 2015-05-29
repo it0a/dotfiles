@@ -1,5 +1,0 @@
-set spoolfile=imaps://www.zimbrahostedemail.com/Inbox
-set folder=imaps://www.zimbrahostedemail.com/
-set imap_user=jordan.gonzalez@streamlinx.com
-set record=imaps://www.zimbrahostedemail.com/Sent
-set postponed=imaps://www.zimbrahostedemail.com/Drafts
