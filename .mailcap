@@ -1,0 +1,7 @@
+image/jpeg; feh %s
+image/gif; feh %s &
+image/png; feh %s &
+image/GIF; feh %s &
+image/JPG; feh %s &
+image/jpg; feh %s &
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
