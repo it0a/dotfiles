@@ -1,11 +1,12 @@
 dotfiles
 ================
 
-* * *
+*WARNING* - Will overwrite any colliding dotfiles. Check `install.sh` before you run.
 
 ### Usage
 
-`./install.sh`
-
-Will overwrite any dotfiles you currently have, so check the script before running it.
-
+```
+git clone https://github.com/it0a/dotfiles
+cd dotfiles
+./install.sh
+```
