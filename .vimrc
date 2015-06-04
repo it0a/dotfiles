@@ -319,12 +319,11 @@ nmap <Leader>a <Plug>(EasyAlign)
 nnoremap <silent> - :Switch<cr>
 
 au BufRead,BufNewFile *.gsp set filetype=html
+au BufRead,BufNewFile *.gradle set filetype=groovy
 
 map <SPACE> <Plug>(easymotion-s2)
 
 nnoremap <F9> :VimuxRunCommand "gradle --project-dir ~/develop/spock/speckr -I ~/develop/spock/speckr/init.gradle test"<CR>
-nnoremap <F7> :call VimuxRunCommand("gradle --project-dir ~/develop/spock/speckr -I ~/develop/spock/speckr/init.gradle -Dtest.single=" . expand("%:t:r") . " test")<CR>
-nnoremap <F6> :call VimuxRunCommand("gradle --project-dir ~/develop/spock/speckr -I ~/develop/spock/speckr/init.gradle -Dtest.single=" . expand("%:t:r") . " test services")<CR>
 
 nnoremap <Leader><Leader><Enter> :Scratch<CR>
 
@@ -545,21 +544,8 @@ command! -nargs=1 Locate call fzf#run(
       \ {'source': 'locate <q-args>', 'sink': 'e', 'options': '-m'})
 
 nnoremap <leader>t :FZF<CR>
-" file is large from 10mb
-let g:LargeFile = 1024 * 1024 * 10
-augroup LargeFile
- autocmd BufReadPre * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
-augroup END
 
-function LargeFile()
- " no syntax highlighting etc
- set eventignore+=FileType
- " save memory when other file is viewed
- setlocal bufhidden=unload
- " is read-only (write with :w new_filename)
- setlocal buftype=nowrite
- " no undo possible
- setlocal undolevels=-1
- " display message
- autocmd VimEnter *  echo "The file is larger than " . (g:LargeFile / 1024 / 1024) . " MB, so some options are changed (see .vimrc for details)."
-endfunction
+
+inoreabbrev SCT SHOW CREATE TABLE
+nnoremap <F6> :exec '!'.getline('.')<CR>
+nnoremap <F7> yyp!!sh<CR><Esc>
