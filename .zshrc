@@ -40,6 +40,7 @@ alias tmux="tmux -2"
 export GROOVY_HOME=$HOME/.gvm/groovy/current
 export GRAILS_HOME=$HOME/.gvm/grails/current
 export GRADLE_HOME=$HOME/.gvm/gradle/current
+alias glog="git log --branches --remotes --tags --graph --oneline --decorate"
 alias bcmt="~/develop/streamlinx/bcmt/bin/bcmt"
 alias grails="$GRAILS_HOME/bin/grails"
 alias gradle="$GRADLE_HOME/bin/gradle"
