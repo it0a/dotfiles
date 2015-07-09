@@ -545,7 +545,7 @@ command! -nargs=1 Locate call fzf#run(
 
 nnoremap <leader>t :FZF<CR>
 
-
+let $FZF_DEFAULT_COMMAND = 'ag -l --ignore-dir="*.class" --ignore-dir="*.jar" --ignore-dir="*.min.js" -g ""'
 inoreabbrev SCT SHOW CREATE TABLE
 nnoremap <F6> :exec '!'.getline('.')<CR>
 nnoremap <F7> yyp!!sh<CR><Esc>
