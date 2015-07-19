@@ -5,4 +5,4 @@ syndaemon -t -k -i 2 &
 #exec ~/.xmonad/xmonad-x86_64-linux
 exec gnome-session
 exec xset -b
-xterm 
+xterm
