@@ -78,7 +78,6 @@ set history=700
 set term=screen-256color
 set t_Co=256
 set background=dark
-"colo radicalgoodspeed
 colo ir_black
 set autoread
 set cursorline
@@ -543,9 +542,49 @@ set rtp+=~/.fzf
 command! -nargs=1 Locate call fzf#run(
       \ {'source': 'locate <q-args>', 'sink': 'e', 'options': '-m'})
 
-nnoremap <leader>t :FZF<CR>
-
-let $FZF_DEFAULT_COMMAND = 'ag -l --ignore-dir="*.class" --ignore-dir="*.jar" --ignore-dir="*.min.js" -g ""'
 inoreabbrev SCT SHOW CREATE TABLE
 nnoremap <F6> :exec '!'.getline('.')<CR>
 nnoremap <F7> yyp!!sh<CR><Esc>
+
+let $FZF_DEFAULT_COMMAND = 'ag -l --ignore-dir="*.class" --ignore-dir="*.jar" --ignore-dir="*.min.js" -g ""'
+
+nnoremap <silent> <Leader>C :call fzf#run({
+            \   'source':
+            \     map(split(globpath(&rtp, "colors/*.vim"), "\n"),
+            \         "substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')"),
+            \   'sink':    'colo',
+            \   'options': '+m',
+            \   'left':    30
+            \ })<CR>
+
+
+function! s:line_handler(l)
+    let keys = split(a:l, ':\t')
+    exec 'buf' keys[0]
+    exec keys[1]
+    normal! ^zz
+endfunction
+
+function! s:buffer_lines()
+    let res = []
+    for b in filter(range(1, bufnr('$')), 'buflisted(v:val)')
+        call extend(res, map(getbufline(b,0,"$"), 'b . ":\t" . (v:key + 1) . ":\t" . v:val '))
+    endfor
+    return res
+endfunction
+
+command! FZFLines call fzf#run({
+            \   'source':  <sid>buffer_lines(),
+            \   'sink':    function('<sid>line_handler'),
+            \   'options': '--extended --nth=3..',
+            \   'down':    '60%'
+            \})
+
+nnoremap <leader>l :FZFLines<CR>
+
+command! -nargs=1 Locate call fzf#run(
+      \ {'source': 'locate <q-args>', 'sink': 'e', 'options': '-m'})
+
+
+nnoremap <leader>T :Locate /<CR>
+nnoremap <leader>t :FZF<CR>
