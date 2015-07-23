@@ -82,6 +82,7 @@ export NODE_PATH=$NODE_PATH:/usr/lib/node_modules
 export FZF_COMPLETION_TRIGGER='~~'
 zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
 
+. ~/build/z/z.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"

@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Add plugins within this block
+Plugin 'burnettk/vim-angular'
 Plugin 'esneider/YUNOcommit.vim'
 Plugin 'jpalardy/vim-slime'
 Plugin 'tpope/vim-fireplace'
@@ -64,7 +65,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-scripts/dbext.vim'
 Plugin 'scrooloose/syntastic'
-"Plugin 'marijnh/tern_for_vim'
+Plugin 'marijnh/tern_for_vim'
 "Plugin 'mephux/vim-jsfmt'
 "
 call vundle#end()
@@ -302,7 +303,7 @@ vnoremap <silent> # :<C-U>
 "set colorcolumn=80
 "highlight ColorColumn ctermbg=9
 
-set wildignore+=*.png,*.jpg,*.gif,*.ogg,*.webm,*.avi,*.mp3,*.mp4,*.wmv,*.wav,*.mov,*.jar,*.war
+set wildignore+=*.png,*.jpg,*.gif,*.ogg,*.webm,*.avi,*.mp3,*.mp4,*.wmv,*.wav,*.mov,*.jar,*.war,*.deb,*.min.js,*.min.css
 set wildignore+=*/Godeps/*
 set wildignore+=*/bower_components/*,*/node_modules/*,*/lib/*
 set wildignore+=*/web-app/lib/*
@@ -358,12 +359,11 @@ let g:agformat="%f:%l:%m"
 
 "Syntastic
 let g:syntastic_check_on_open = 1
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-", "invalid value \"{{"]
-" On by default, turn it off for html
 let g:syntastic_mode_map = { 'mode': 'active',
     \ 'active_filetypes': [],
-    \ 'passive_filetypes': ['html'] }
+    \ 'passive_filetypes': [] }
 let g:syntastic_always_populate_loc_list=1
+let g:syntastic_html_tidy_exec = 'tidy'
 nnoremap <Leader>?? :SyntasticCheck<CR>
 
 " Unite
@@ -504,14 +504,14 @@ vmap <leader>uc :call ChangeSqlCase()<CR>
 let g:golang_goroot = "~/develop/go"
 
 " tagbar support for groovy
-let g:tagbar_type_groovy = {
-\ 'ctagstype' : 'groovy',
-\ 'kinds'     : [
-    \ 'f:function',
-    \ 'd:describe',
-    \ 't:specification',
-\ ]
-\ }
+"let g:tagbar_type_groovy = {
+"\ 'ctagstype' : 'groovy',
+"\ 'kinds'     : [
+    "\ 'f:function',
+    "\ 'd:describe',
+    "\ 't:specification',
+"\ ]
+"\ }
 
 let g:lite_dfm_normal_bg_cterm = 232
 let g:syntastic_sh_checkers = ['shellcheck']
@@ -546,7 +546,7 @@ inoreabbrev SCT SHOW CREATE TABLE
 nnoremap <F6> :exec '!'.getline('.')<CR>
 nnoremap <F7> yyp!!sh<CR><Esc>
 
-let $FZF_DEFAULT_COMMAND = 'ag -l --ignore-dir="*.class" --ignore-dir="*.jar" --ignore-dir="*.min.js" -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag -l --ignore-dir="*.class" --ignore-dir="*.jar" --ignore-dir="*min.js" --ignore-dir="*.otf" --ignore-dir="*.ttf" --ignore-dir="*.out" --ignore-dir="*.war" --ignore-dir="*.png" --ignore-dir="*.jpg" --ignore-dir="*.avi" --ignore-dir="*node_modules*" --ignore-dir="*min.css" --ignore-dir="*.deb" -g ""'
 
 nnoremap <silent> <Leader>C :call fzf#run({
             \   'source':
@@ -588,3 +588,7 @@ command! -nargs=1 Locate call fzf#run(
 
 nnoremap <leader>T :Locate /<CR>
 nnoremap <leader>t :FZF<CR>
+inoremap ccs <ESC>b<Plug>Coerce :<C-U>call <SNR>82_coerce('s')<CR>A
+
+" Fugitive bindings
+nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
