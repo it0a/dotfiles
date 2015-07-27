@@ -546,7 +546,7 @@ inoreabbrev SCT SHOW CREATE TABLE
 nnoremap <F6> :exec '!'.getline('.')<CR>
 nnoremap <F7> yyp!!sh<CR><Esc>
 
-let $FZF_DEFAULT_COMMAND = 'ag -l --ignore-dir="*.class" --ignore-dir="*.jar" --ignore-dir="*min.js" --ignore-dir="*.otf" --ignore-dir="*.ttf" --ignore-dir="*.out" --ignore-dir="*.war" --ignore-dir="*.mp3" --ignore-dir="*.mp4" --ignore-dir="*.flac" --ignore-dir="*.png" --ignore-dir="*.jpg" --ignore-dir="*.avi" --ignore-dir="*node_modules*" --ignore-dir="*min.css" --ignore-dir="*.deb" -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag -l --ignore-dir="*.class" --ignore-dir="*.jar" --ignore-dir="*min.js" --ignore-dir="*.otf" --ignore-dir="*.ttf" --ignore-dir="*.out" --ignore-dir="*.war" --ignore-dir="*.mp3" --ignore-dir="*.mp4" --ignore-dir="*.flac" --ignore-dir="*.wav" --ignore-dir="*.png" --ignore-dir="*.jpg" --ignore-dir="*.avi" --ignore-dir="*node_modules*" --ignore-dir="*min.css" --ignore-dir="*.deb" -g ""'
 
 nnoremap <silent> <Leader>C :call fzf#run({
             \   'source':
