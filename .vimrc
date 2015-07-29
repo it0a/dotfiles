@@ -79,7 +79,7 @@ set history=700
 set term=screen-256color
 set t_Co=256
 set background=dark
-colo ir_black
+colo nazca
 set autoread
 set cursorline
 set so=7
@@ -278,6 +278,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>J J
 
 inoremap jk <esc>
+inoremap jj <esc>
 
 onoremap p i(
 onoremap c i{
@@ -592,3 +593,9 @@ inoremap ccs <ESC>b<Plug>Coerce :<C-U>call <SNR>82_coerce('s')<CR>A
 
 " Fugitive bindings
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
+
+inoremap .serr .success(data => )<CR>.error(data => $log.error(data));<ESC>k$i
+
+inoreabbrev ngdt table.table.table-full.table-fixed.table-striped.table-bordered>thead>tr>th{Heading $}*3^^tbody>tr[ng-repeat="x in data"]>td{Data $}*3^^tbody[ng-if="!data"]>tr>td.align-center.padding-t-slight.padding-b-slight[colspan=3]>h4{No Data}
+
+inoremap <leader>aa <ESC>byiwPa, "No <ESC>A given."<ESC>Iassert params.<ESC>o
