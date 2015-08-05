@@ -1,0 +1,9 @@
+vertical-space: 1
+indent-attributes: 1
+indent: yes
+hide-endtags: no
+quiet: yes
+tidy-mark: no
+show-body-only: yes
+new-blocklevel-tags: prettyxml
+show-warnings: 0

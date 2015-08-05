@@ -301,8 +301,8 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-"set colorcolumn=80
-"highlight ColorColumn ctermbg=9
+set colorcolumn=80
+highlight ColorColumn ctermbg=0
 
 set wildignore+=*.png,*.jpg,*.gif,*.ogg,*.webm,*.avi,*.mp3,*.mp4,*.wmv,*.wav,*.mov,*.jar,*.war,*.deb,*.min.js,*.min.css
 set wildignore+=*/Godeps/*
@@ -599,3 +599,57 @@ inoremap .serr .success(data => )<CR>.error(data => $log.error(data));<ESC>k$i
 inoreabbrev ngdt table.table.table-full.table-fixed.table-striped.table-bordered>thead>tr>th{Heading $}*3^^tbody>tr[ng-repeat="x in data"]>td{Data $}*3^^tbody[ng-if="!data"]>tr>td.align-center.padding-t-slight.padding-b-slight[colspan=3]>h4{No Data}
 
 inoremap <leader>aa <ESC>byiwPa, "No <ESC>A given."<ESC>Iassert params.<ESC>o
+
+" XML formatter
+function! DoFormatXML() range
+    " Save the file type
+    let l:origft = &ft
+
+    " Clean the file type
+    set ft=
+
+    " Add fake initial tag (so we can process multiple top-level elements)
+    exe ":let l:beforeFirstLine=" . a:firstline . "-1"
+    if l:beforeFirstLine < 0
+        let l:beforeFirstLine=0
+    endif
+    exe a:lastline . "put ='</prettyxml>'"
+    exe l:beforeFirstLine . "put ='<prettyxml>'"
+    exe ":let l:newLastLine=" . a:lastline . "+2"
+    if l:newLastLine > line('$')
+        let l:newLastLine=line('$')
+    endif
+
+    " Remove XML header
+    exe ":" . a:firstline . "," . a:lastline . "s/<\?xml\\_.*\?>\\_s*//e"
+
+    " Recalculate last line of the edited code
+    let l:newLastLine=search('</prettyxml>')
+
+    " Execute external formatter
+    exe ":silent " . a:firstline . "," . l:newLastLine . "!tidy -config ~/.tidyconfig -"
+
+    " Recalculate first and last lines of the edited code
+    let l:newFirstLine=search('<prettyxml>')
+    let l:newLastLine=search('</prettyxml>')
+
+    " Get inner range
+    let l:innerFirstLine=l:newFirstLine+1
+    let l:innerLastLine=l:newLastLine-1
+
+    " Remove extra unnecessary indentation
+    exe ":silent " . l:innerFirstLine . "," . l:innerLastLine "s/^  //e"
+
+    " Remove fake tag
+    exe l:newLastLine . "d"
+    exe l:newFirstLine . "d"
+
+    " Put the cursor at the first line of the edited code
+    exe ":" . l:newFirstLine
+
+    " Restore the file type
+    exe "set ft=" . l:origft
+endfunction
+command! -range=% FormatXML <line1>,<line2>call DoFormatXML()
+
+vmap <silent> <leader>x :FormatXML<CR>w%=%
