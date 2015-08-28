@@ -301,9 +301,6 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-set colorcolumn=80
-highlight ColorColumn ctermbg=0
-
 set wildignore+=*.png,*.jpg,*.gif,*.ogg,*.webm,*.avi,*.mp3,*.mp4,*.wmv,*.wav,*.mov,*.jar,*.war,*.deb,*.min.js,*.min.css
 set wildignore+=*/Godeps/*
 set wildignore+=*/bower_components/*,*/node_modules/*,*/lib/*
@@ -653,3 +650,9 @@ endfunction
 command! -range=% FormatXML <line1>,<line2>call DoFormatXML()
 
 vmap <silent> <leader>x :FormatXML<CR>w%=%
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=0
+
+inoreabbrev drfs div.row-fluid>div.span12
+
