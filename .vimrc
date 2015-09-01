@@ -366,8 +366,10 @@ nnoremap <Leader>?? :SyntasticCheck<CR>
 
 " Unite
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:unite_source_grep_command = '/home/jgonzalez/build/the_silver_searcher/ag'
-let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden --ignore-case --ignore tags'
+let g:unite_source_grep_command = '/home/jgonzalez/bin/ag'
+let g:unite_source_grep_default_opts =
+\ '-i --vimgrep --hidden --ignore ' .
+\ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
 let g:unite_source_grep_recursive_opt = ''
 let g:unite_enable_start_insert=1
 let g:unite_split_rule="botright"
