@@ -84,7 +84,17 @@ set autoread
 set cursorline
 set so=7
 set wildmenu
+" wildignore
 set wildignore=*.o,*~,*.pyc,*.class,*.class.*
+set wildignore+=*.png,*.jpg,*.gif,*.ogg,*.webm,*.avi,*.mp3,*.mp4,*.wmv,*.wav,*.mov,*.jar,*.war,*.deb,*.min.js,*.min.css
+set wildignore+=*/Godeps/*
+set wildignore+=*/bower_components/*,*/node_modules/*,*/lib/*
+set wildignore+=*/web-app/lib/*
+set wildignore+=*/web-app/smartsToo/coverage/*
+set wildignore+=*/web-app/smartsToo/lib/*
+set wildignore+=*/dist/*
+set wildignore+=*/target/*
+"
 set ruler
 set cmdheight=1
 set hid
@@ -301,14 +311,6 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-set wildignore+=*.png,*.jpg,*.gif,*.ogg,*.webm,*.avi,*.mp3,*.mp4,*.wmv,*.wav,*.mov,*.jar,*.war,*.deb,*.min.js,*.min.css
-set wildignore+=*/Godeps/*
-set wildignore+=*/bower_components/*,*/node_modules/*,*/lib/*
-set wildignore+=*/web-app/lib/*
-set wildignore+=*/web-app/smartsToo/coverage/*
-set wildignore+=*/web-app/smartsToo/lib/*
-set wildignore+=*/dist/*
-set wildignore+=*/target/*
 
 " vim-easy-align
 vmap <Enter> <Plug>(EasyAlign)
@@ -455,7 +457,6 @@ autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype eruby setlocal ts=2 sw=2 noexpandtab
 
-
 function! EatChar(pat)
     let c = nr2char(getchar(0))
     return (c =~ a:pat) ? '' : c
@@ -502,16 +503,6 @@ let g:UltisnipsSnippetDirectories=['Ultisnips', 'snippets']
 vmap <leader>uc :call ChangeSqlCase()<CR>
 
 let g:golang_goroot = "~/develop/go"
-
-" tagbar support for groovy
-"let g:tagbar_type_groovy = {
-"\ 'ctagstype' : 'groovy',
-"\ 'kinds'     : [
-    "\ 'f:function',
-    "\ 'd:describe',
-    "\ 't:specification',
-"\ ]
-"\ }
 
 let g:lite_dfm_normal_bg_cterm = 232
 let g:syntastic_sh_checkers = ['shellcheck']
