@@ -423,8 +423,6 @@ nnoremap <silent> <leader>/ :<C-u>Unite line -start-insert<CR>
 nnoremap <F8> :TagbarToggle<CR>
 
 ""
-let g:CommandTTraverseSCM="pwd"
-"
 "
 let g:dbext_default_history_size=1000
 let g:airline_theme='murmur'
