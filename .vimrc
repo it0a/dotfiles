@@ -204,6 +204,7 @@ nnoremap <leader>s? z=
 
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+nnoremap <Leader>nnn mmHmt:%s/\\n/\r/ge<cr>'tzt'm
 
 function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
@@ -577,7 +578,6 @@ command! -nargs=1 Locate call fzf#run(
 
 nnoremap <leader>T :Locate /<CR>
 nnoremap <leader>t :FZF<CR>
-inoremap ccs <ESC>b<Plug>Coerce :<C-U>call <SNR>82_coerce('s')<CR>A
 
 " Fugitive bindings
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
@@ -646,4 +646,6 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=0
 
 inoreabbrev drfs div.row-fluid>div.span12
+
+nnoremap gp `[v`]
 

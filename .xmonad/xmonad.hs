@@ -19,8 +19,7 @@ main :: IO()
 main = xmonad
     $ withUrgencyHook LibNotifyUrgencyHook
     $ defaultConfig
-        { modMask = mod4Mask -- Use Super instead of Alt
-        , borderWidth = 0
+        { borderWidth = 0
         , terminal = "urxvt"
         -- more changes
         }
