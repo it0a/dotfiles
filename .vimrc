@@ -4,43 +4,25 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Add plugins within this block
-Plugin 'burnettk/vim-angular'
-Plugin 'esneider/YUNOcommit.vim'
+Plugin 'Quramy/tsuquyomi'
 Plugin 'jpalardy/vim-slime'
-Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
-Plugin 'lervag/vim-latex'
 Plugin 'krisajenkins/vim-pipe'
-Plugin 'dahu/Nexus'
-Plugin 'calebsmith/vim-lambdify'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'AndrewRadev/switch.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'ScrollColors'
-Plugin 'Shougo/unite.vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'The-NERD-Commenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Valloric/MatchTagAlways'
-Plugin 'ack.vim'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'benmills/vimux'
 Plugin 'bling/vim-airline'
-Plugin 'claco/jasmine.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'bilalq/lite-dfm'
-Plugin 'dgryski/vim-godef'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'elzr/vim-json'
-Plugin 'fatih/vim-go'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
-Plugin 'godlygeek/tabular'
 Plugin 'godlygeek/csapprox'
-Plugin 'SirVer/ultisnips'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'junegunn/seoul256.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'majutsushi/tagbar'
@@ -48,26 +30,19 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'matchit.zip'
 Plugin 'changesqlcase.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'mtth/scratch.vim'
-Plugin 'Blackrush/vim-gocode'
 Plugin 'oblitum/rainbow'
-Plugin 'pangloss/vim-javascript'
-Plugin 'rking/ag.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'tommcdo/vim-fugitive-blame-ext'
 Plugin 'tpope/vim-abolish'
-Plugin 'triglav/vim-visual-increment'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-scripts/dbext.vim'
 Plugin 'scrooloose/syntastic'
-Plugin 'marijnh/tern_for_vim'
-"Plugin 'mephux/vim-jsfmt'
-"
+Plugin 'Shougo/denite.nvim'
+
 call vundle#end()
 filetype plugin indent on
 set ffs=unix,dos,mac
@@ -76,10 +51,10 @@ set encoding=utf8
 let mapleader = ","
 let g:mapleader = ","
 set history=700
-set term=screen-256color
 set t_Co=256
 set background=dark
-colo nazca
+"colo nazca
+colo lilypink
 set autoread
 set cursorline
 set so=7
@@ -92,6 +67,7 @@ set wildignore+=*/bower_components/*,*/node_modules/*,*/lib/*
 set wildignore+=*/web-app/lib/*
 set wildignore+=*/web-app/smartsToo/coverage/*
 set wildignore+=*/web-app/smartsToo/lib/*
+set wildignore+=*/web-reference/*
 set wildignore+=*/dist/*
 set wildignore+=*/target/*
 "
@@ -268,7 +244,7 @@ set guitablabel=\[%N\]\ %t\ %M
 
 let g:colorizer_nomap = 1
 
-set grepprg=ack\ -k
+set grepprg=ag\ --nocolor\ --nogroup\ --vimgrep\ $*
 
 " Convert
 " myFunction(){
@@ -362,73 +338,15 @@ let g:agformat="%f:%l:%m"
 let g:syntastic_check_on_open = 1
 let g:syntastic_mode_map = { 'mode': 'active',
     \ 'active_filetypes': [],
-    \ 'passive_filetypes': [] }
+    \ 'passive_filetypes': ['java'] }
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_html_tidy_exec = 'tidy'
 nnoremap <Leader>?? :SyntasticCheck<CR>
 
-" Unite
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:unite_source_grep_command = '/home/jgonzalez/bin/ag'
-let g:unite_source_grep_default_opts =
-\ '-i --vimgrep --hidden --ignore ' .
-\ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
-let g:unite_source_grep_recursive_opt = ''
-let g:unite_enable_start_insert=1
-let g:unite_split_rule="botright"
-let g:unite_winheight=20
-let g:unite_source_history_yank_enable=1
-let g:unite_data_directory='~/.vim/.cache/unite'
-let g:unite_source_rec_max_cache_files = 5000
-let g:unite_prompt='=> '
-call unite#custom#source('file_rec,file_rec/async,file_mru,file,buffer,grep',
-\ 'ignore_pattern', join([
-\ '\.swp', '\.swo', '\~$',
-\ '\.git/', '\.svn/', '\.hg/',
-\ '^tags$', '\.taghl$',
-\ '\.ropeproject/',
-\ '\.jar$',
-\ 'target/',
-\ 'apps/',
-\ 'SmartsTooMetaData/',
-\ 'node_modules/', 'log/', 'tmp/', 'obj/',
-\ '/vendor/gems/', '/vendor/cache/', '\.bundle/', '\.sass-cache/',
-\ '/tmp/cache/assets/.*/sprockets/', '/tmp/cache/assets/.*/sass/',
-\ 'thirdparty/', 'Debug/', 'Release/',
-\ '\.pyc$', '\.class$', '\.jar$',
-\ '\.jpg$', '\.jpeg$', '\.bmp$', '\.png$', '\.gif$',
-\ '\.o$', '\.out$', '\.obj$', '\.rbc$', '\.rbo$', '\.gem$',
-\ '\.zip$', '\.tar\.gz$', '\.tar\.bz2$', '\.rar$', '\.tar\.xz$'
-\ ], '\|'))
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#custom#source('file,file/new,buffer,file_rec,line', 'matchers', 'matcher_fuzzy')
-autocmd FileType unite call s:unite_settings()
-function! s:unite_settings()
-let b:SuperTabDisabled=1
-imap <buffer> <C-j> <Plug>(unite_select_next_line)
-imap <buffer> <C-k> <Plug>(unite_select_previous_line)
-imap <buffer> <c-a> <Plug>(unite_choose_action)
-imap <silent><buffer><expr> <C-s> unite#do_action('split')
-imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
-imap <silent><buffer><expr> <C-t> unite#do_action('tabopen')
-nmap <buffer> <ESC> <Plug>(unite_exit)
-imap <buffer> <ESC> <Plug>(unite_exit)
-endfunction
-
-nnoremap <silent> <C-p> :<C-u>Unite -buffer-name=files file_rec<CR>
-nnoremap <silent> <C-f> :<C-u>Unite -no-split grep:.<CR>
-nnoremap <silent> <C-y> :<C-u>Unite -buffer-name=yanks history/yank<CR>
-nnoremap <silent> <leader>/ :<C-u>Unite line -start-insert<CR>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F8> :TagbarToggle<CR>
 
-""
-"
 let g:dbext_default_history_size=1000
-let g:airline_theme='murmur'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoreabbrev takenote <link href="http://jasonm23.github.io/markdown-css-themes/markdown9.css" rel="stylesheet"></link><CR><ESC>:.!date +\%F<CR>A Notes<CR>================<CR><CR>* * *<CR><CR>###
 nnoremap <leader>pm :!marked % \| bcat<CR>
 let g:limelight_conceal_ctermfg = 240
 
@@ -469,35 +387,6 @@ if filereadable(expand('~/.vim/private/private.vim'))
 endif
 
 nnoremap <Leader>z :LiteDFMToggle<CR>:silent !tmux set status > /dev/null 2>&1<CR>:redraw!<CR>
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-function! g:UltiSnips_Complete()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips#JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
-
-au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-let g:UltiSnipsJumpForwardTrigger="<c-a>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsListSnippets="<c-e>"
-" CONFLICT with some plugins like tpope/Endwise
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-let g:UltisnipsSnippetsDir="~/.vim/snippets"
-let g:UltisnipsSnippetDirectories=['Ultisnips', 'snippets']
 
 vmap <leader>uc :call ChangeSqlCase()<CR>
 
@@ -577,7 +466,6 @@ command! -nargs=1 Locate call fzf#run(
 
 
 nnoremap <leader>T :Locate /<CR>
-nnoremap <leader>t :FZF<CR>
 
 " Fugitive bindings
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
@@ -648,4 +536,43 @@ highlight ColorColumn ctermbg=0
 inoreabbrev drfs div.row-fluid>div.span12
 
 nnoremap gp `[v`]
+
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
+
+
+call denite#custom#var('file_rec', 'command',
+\ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+
+" Ag command on grep source
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'default_opts',
+        \ ['-i', '--vimgrep'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
+
+call denite#custom#source(
+            \ 'file_mru', 'matchers', ['matcher_fuzzy'])
+
+call denite#custom#source(
+	\ 'file_rec', 'sorters', ['sorter_rank'])
+
+call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+
+nnoremap <silent> <C-f> :<C-u>Denite -no-empty grep<CR>
+nnoremap <silent> <C-t> :<C-u>Denite -no-empty file_rec<CR>
+nnoremap <silent> <leader>t :<C-u>Denite -no-empty file_rec<CR>
+
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+au FileType vue setl sw=2 sts=2 et
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 

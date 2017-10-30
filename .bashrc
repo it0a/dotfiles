@@ -28,3 +28,7 @@ for f in $(command ls ~/.node-completion); do
   test -f "$f" && . "$f"
 done
 # }}}
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/jgonzalez/.sdkman"
+[[ -s "/home/jgonzalez/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jgonzalez/.sdkman/bin/sdkman-init.sh"

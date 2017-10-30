@@ -5,3 +5,5 @@ image/GIF; feh %s &
 image/JPG; feh %s &
 image/jpg; feh %s &
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
+# Java Web Start
+application/x-java-jnlp-file; /home/jgonzalez/Downloads/j2sdk1.4.2_19/jre/javaws/javaws %s
